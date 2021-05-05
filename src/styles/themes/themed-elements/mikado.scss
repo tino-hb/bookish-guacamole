@@ -5,15 +5,15 @@
 @import "~src/styles/base/variables";
 @import '~@angular/material/theming';
 
-$mikado-width: $fresh-angular-mikado-size-default;
-$mikado-height: $fresh-angular-mikado-size-default;
+$mikado-width: $bookish-guacamole-mikado-size-default;
+$mikado-height: $bookish-guacamole-mikado-size-default;
 $mikado-line-width-default: round($mikado-width / 2);
 $mikado-line-width-menu: $mikado-line-width-default;
 $mikado-line-width-close: $mikado-line-width-default;
 $mikado-line-width-back: round($mikado-width * .4166666666666); // 5/12
 $mikado-line-size: 1px;
 $mikado-vertical-center: ($mikado-height / 2) - ($mikado-line-size);
-$mikado-transition-default: $fresh-angular-transition-default;
+$mikado-transition-default: $bookish-guacamole-transition-default;
 
 @mixin r4-mikado-theme($theme) {
 	$primary: map-get($theme, primary);
@@ -131,13 +131,13 @@ $mikado-transition-default: $fresh-angular-transition-default;
 
 		&--color-black {
 			span {
-				background: $fresh-angular-color-black;
+				background: $bookish-guacamole-color-black;
 			}
 		}
 
 		&--color-white {
 			span {
-				background: $fresh-angular-color-white;
+				background: $bookish-guacamole-color-white;
 			}
 		}
 	}

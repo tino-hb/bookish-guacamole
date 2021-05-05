@@ -1,6 +1,6 @@
 {
-  "name": "fresh-angular",
-  "version": "0.0.0",
+  "name": "bookish-guacamole",
+  "version": "0.0.1",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

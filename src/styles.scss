@@ -7,38 +7,38 @@
 
 // Define a custom typography config that overrides the font-family as well as the
 // `headlines` and `body-1` levels.
-$fresh-angular-typography: mat-typography-config(
-  $font-family: 	$fresh-angular-font-family-base,
+$bookish-guacamole-typography: mat-typography-config(
+  $font-family: 	$bookish-guacamole-font-family-base,
 );
 
 // Include the common styles for Angular Material. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
 // Be sure that you only ever include this mixin once!
-@include mat-core($fresh-angular-typography);
+@include mat-core($bookish-guacamole-typography);
 
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$fresh-angular-primary: mat-palette($mat-indigo);
-$fresh-angular-accent: mat-palette($mat-pink, A200, A100, A400);
+$bookish-guacamole-primary: mat-palette($mat-indigo);
+$bookish-guacamole-accent: mat-palette($mat-pink, A200, A100, A400);
 
 // The warn palette is optional (defaults to red).
-$fresh-angular-warn: mat-palette($mat-red);
+$bookish-guacamole-warn: mat-palette($mat-red);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
-$fresh-angular-theme: mat-light-theme((
+$bookish-guacamole-theme: mat-light-theme((
   color: (
-    primary: $fresh-angular-primary,
-    accent: $fresh-angular-accent,
-    warn: $fresh-angular-warn,
+    primary: $bookish-guacamole-primary,
+    accent: $bookish-guacamole-accent,
+    warn: $bookish-guacamole-warn,
   )
 ));
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
-@include angular-material-theme($fresh-angular-theme);
+@include angular-material-theme($bookish-guacamole-theme);
 
 /* You can add global styles to this file, and also import other style files */
 

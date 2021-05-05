@@ -9,18 +9,18 @@
 		@include unselectable();
 		@include text-truncate();
 		cursor: pointer;
-		transition: all $fresh-angular-transition-default ease-in-out;
+		transition: all $bookish-guacamole-transition-default ease-in-out;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		font-family: $fresh-angular-font-family-outstanding;
-		font-size: $fresh-angular-font-size-button;
+		font-family: $bookish-guacamole-font-family-outstanding;
+		font-size: $bookish-guacamole-font-size-button;
 		padding: 0.4em 0.75em;
-		color: $fresh-angular-color-white;
+		color: $bookish-guacamole-color-white;
 		background-color: mat-color($accent);
 		border-width: 0;
 		box-shadow: inset 0 0 0 2px mat-color($accent);
-		border-radius: $fresh-angular-border-radius-default;
+		border-radius: $bookish-guacamole-border-radius-default;
 		letter-spacing: 1px;
 		word-spacing: 1px;
 
@@ -32,7 +32,7 @@
 		r4-icon {
 			flex-shrink: 0;
 			font-size: 1.4em;
-			margin-right: $fresh-angular-icon-spacing-l;
+			margin-right: $bookish-guacamole-icon-spacing-l;
 		}
 
 		&--outline {
@@ -40,16 +40,16 @@
 			color: mat-color($accent);
 
 			@include hover-and-active() {
-				color: $fresh-angular-color-white;
+				color: $bookish-guacamole-color-white;
 				box-shadow: inset 0 0 0 2em mat-color($accent);
 			}
 		}
 
 		&--outstanding {
-			border-radius: $fresh-angular-border-radius-outstanding;
+			border-radius: $bookish-guacamole-border-radius-outstanding;
 
 			@include hover-and-active() {
-				border-radius: $fresh-angular-border-radius-outstanding-hover;
+				border-radius: $bookish-guacamole-border-radius-outstanding-hover;
 			}
 		}
 

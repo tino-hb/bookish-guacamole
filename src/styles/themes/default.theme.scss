@@ -1,8 +1,8 @@
 @import "~src/styles/base/variables";
 @import '~@angular/material/theming';
 
-$fresh-angular-primary: mat-palette($fresh-angular-brand-color-map, 200, 100, 300);
-$fresh-angular-accent: mat-palette($mat-orange, 500, 100, 700);
-$fresh-angular-warn: mat-palette($mat-deep-orange, 600);
+$bookish-guacamole-primary: mat-palette($bookish-guacamole-brand-color-map, 200, 100, 300);
+$bookish-guacamole-accent: mat-palette($mat-orange, 500, 100, 700);
+$bookish-guacamole-warn: mat-palette($mat-deep-orange, 600);
 
-$fresh-angular-theme: mat-light-theme($fresh-angular-primary, $fresh-angular-accent, $fresh-angular-warn);
+$bookish-guacamole-theme: mat-light-theme($bookish-guacamole-primary, $bookish-guacamole-accent, $bookish-guacamole-warn);

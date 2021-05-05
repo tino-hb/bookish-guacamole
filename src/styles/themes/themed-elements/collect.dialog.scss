@@ -17,7 +17,7 @@ $collect-dialog-crowns-font-size: 120px;
 	.collect-dialog {
 		.mat-dialog-container {
 			background: $collect-dialog-color-primary;
-			color: $fresh-angular-color-white;
+			color: $bookish-guacamole-color-white;
 		}
 
 		.crowns {
@@ -26,10 +26,10 @@ $collect-dialog-crowns-font-size: 120px;
 			left: 1%;
 			height: 98%;
 			width: 98%;
-			font-family: $fresh-angular-font-family-outstanding;
+			font-family: $bookish-guacamole-font-family-outstanding;
 			font-size: $collect-dialog-crowns-font-size;
 			font-weight: bolder;
-			background: $fresh-angular-color-white;
+			background: $bookish-guacamole-color-white;
 			color: $collect-dialog-color-accent;
 			display: flex;
 			align-items: center;

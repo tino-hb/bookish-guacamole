@@ -13,21 +13,21 @@
 		right: 0;
 		left: 0;
 		width: 100%;
-		height: $fresh-angular-toolbar-height-default;
-		z-index: $fresh-angular-toolbar-z-index;
+		height: $bookish-guacamole-toolbar-height-default;
+		z-index: $bookish-guacamole-toolbar-z-index;
 		display: flex;
 		box-sizing: border-box;
 		flex-direction: row;
 		align-items: center;
 		white-space: nowrap;
 		background: mat-color($primary);
-		font-family: $fresh-angular-font-family-outstanding;
-		font-size: $fresh-angular-toolbar-font-size-default;
+		font-family: $bookish-guacamole-font-family-outstanding;
+		font-size: $bookish-guacamole-toolbar-font-size-default;
 
 		.toolbar-brand {
 			height: 100%;
-			width: $fresh-angular-sidebar-width-default;
-			padding-left: $fresh-angular-toolbar-horizontal-spacing-default;
+			width: $bookish-guacamole-sidebar-width-default;
+			padding-left: $bookish-guacamole-toolbar-horizontal-spacing-default;
 
 			a {
 				display: flex;
@@ -37,14 +37,14 @@
 		}
 
 		.sidebar-toggle {
-			transition: all $fresh-angular-sidebar-animation-duration ease-in-out;
+			transition: all $bookish-guacamole-sidebar-animation-duration ease-in-out;
 			position: fixed;
 			bottom: 0;
 			left: 0;
 			font-size: 0;
 
 			&--open {
-				left: $fresh-angular-sidebar-width-default - $fresh-angular-sidebar-toggle-size;
+				left: $bookish-guacamole-sidebar-width-default - $bookish-guacamole-sidebar-toggle-size;
 			}
 		}
 
@@ -62,7 +62,7 @@
 			display: flex;
 			height: 100%;
 			align-items: center;
-			color: $fresh-angular-color-white;
+			color: $bookish-guacamole-color-white;
 		}
 
 		&__page-title,
@@ -71,7 +71,7 @@
 			top: 0;
 			left: 50%;
 			transform: translate(-50%,0);
-			padding: 0 $fresh-angular-toolbar-horizontal-spacing-default;
+			padding: 0 $bookish-guacamole-toolbar-horizontal-spacing-default;
 
 			&--mobile {
 				left: 0;
@@ -82,27 +82,27 @@
 		&__user {
 			position: absolute;
 			right: 0;
-			transition: all $fresh-angular-sidebar-animation-duration ease-out;
-			padding: 0 $fresh-angular-toolbar-horizontal-spacing-default 0 (2 * $fresh-angular-toolbar-horizontal-spacing-default);
-			clip-path: polygon($fresh-angular-toolbar-horizontal-spacing-default $fresh-angular-toolbar-horizontal-spacing-default, 100% 0, 100% 100%, 0% 100%);
+			transition: all $bookish-guacamole-sidebar-animation-duration ease-out;
+			padding: 0 $bookish-guacamole-toolbar-horizontal-spacing-default 0 (2 * $bookish-guacamole-toolbar-horizontal-spacing-default);
+			clip-path: polygon($bookish-guacamole-toolbar-horizontal-spacing-default $bookish-guacamole-toolbar-horizontal-spacing-default, 100% 0, 100% 100%, 0% 100%);
 			background: mat-color($primary);
 
 			&__count {
 				display: inline-block;
-				margin-right: $fresh-angular-spacing-micro;
+				margin-right: $bookish-guacamole-spacing-micro;
 			}
 
 			&--mobile-escape {
-				transform: translateY(-($fresh-angular-toolbar-height-mobile - 1));
+				transform: translateY(-($bookish-guacamole-toolbar-height-mobile - 1));
 			}
 		}
 
 		&--mobile {
 			top: auto;
 			bottom: 0;
-			height: $fresh-angular-toolbar-height-mobile;
-			padding: 0 0 0 $fresh-angular-sidebar-toggle-size;
-			font-size: $fresh-angular-toolbar-font-size-mobile;
+			height: $bookish-guacamole-toolbar-height-mobile;
+			padding: 0 0 0 $bookish-guacamole-sidebar-toggle-size;
+			font-size: $bookish-guacamole-toolbar-font-size-mobile;
 
 			.sidebar-toggle {
 				&--open {

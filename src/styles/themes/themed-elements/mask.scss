@@ -59,7 +59,7 @@
 
 		&--black {
 			.mask {
-				@include icon-color($fresh-angular-color-black) {
+				@include icon-color($bookish-guacamole-color-black) {
 					--var__border-color: #{$mask-color-accent};
 				}
 			}
@@ -67,7 +67,7 @@
 
 		&--white {
 			.mask {
-				@include icon-color($fresh-angular-color-white) {
+				@include icon-color($bookish-guacamole-color-white) {
 					--var__border-color: #{$mask-color-accent};
 				}
 			}

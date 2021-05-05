@@ -12,43 +12,43 @@
 
 		.sidebar {
 			background-color: mat-color($primary);
-			padding-bottom: $fresh-angular-sidebar-toggle-size;
+			padding-bottom: $bookish-guacamole-sidebar-toggle-size;
 			border-bottom-right-radius: 2%;
 			border-right-width: 0;
 
 			.sidebar-brand {
-				font-family: $fresh-angular-font-family-outstanding;
-				transition: all $fresh-angular-sidebar-animation-duration ease-out;
-				padding: $fresh-angular-spacing-base $fresh-angular-toolbar-horizontal-spacing-default;
+				font-family: $bookish-guacamole-font-family-outstanding;
+				transition: all $bookish-guacamole-sidebar-animation-duration ease-out;
+				padding: $bookish-guacamole-spacing-base $bookish-guacamole-toolbar-horizontal-spacing-default;
 				border-bottom: 1px solid $divider;
 				display: flex;
 				align-items: center;
-				width: $fresh-angular-sidebar-width-default;
+				width: $bookish-guacamole-sidebar-width-default;
 				overflow: hidden;
 
 				&__logo {
-					color: $fresh-angular-color-brand-logo;
-					font-size: $fresh-angular-brand-logo-size-default;
+					color: $bookish-guacamole-color-brand-logo;
+					font-size: $bookish-guacamole-brand-logo-size-default;
 				}
 
 				&__title {
 					display: inline-block;
-					font-size: $fresh-angular-brand-title-size-default;
-					color: $fresh-angular-color-brand-title;
+					font-size: $bookish-guacamole-brand-title-size-default;
+					color: $bookish-guacamole-color-brand-title;
 					overflow: hidden;
 				}
 
 				&__beta {
-					margin-left: $fresh-angular-spacing-xs;
-					color: $fresh-angular-color-brand-beta;
+					margin-left: $bookish-guacamole-spacing-xs;
+					color: $bookish-guacamole-color-brand-beta;
 					overflow: hidden;
 				}
 
 				&--collapsed {
-					width: $fresh-angular-sidebar-width-collapsed;
+					width: $bookish-guacamole-sidebar-width-collapsed;
 					font-size: 0;
 					justify-content: center;
-					padding: $fresh-angular-spacing-base 0;
+					padding: $bookish-guacamole-spacing-base 0;
 
 					.sidebar-brand__title {
 						display: none;
@@ -61,12 +61,12 @@
 			}
 
 			.mat-list-item {
-				transition: all $fresh-angular-sidebar-animation-duration ease-out;
-				font-family: $fresh-angular-font-family-outstanding;
+				transition: all $bookish-guacamole-sidebar-animation-duration ease-out;
+				font-family: $bookish-guacamole-font-family-outstanding;
 				position: relative;
-				color: $fresh-angular-color-white;
+				color: $bookish-guacamole-color-white;
 				background-color: mat-color($primary);
-				width: $fresh-angular-sidebar-width-default;
+				width: $bookish-guacamole-sidebar-width-default;
 				overflow: hidden;
 
 				&:before {
@@ -77,25 +77,25 @@
 					top: -2px;
 					left: 0;
 					width: 48px;
-					border: $fresh-angular-spacing-xs solid transparent;
-					border-radius: $fresh-angular-border-radius-outstanding;
+					border: $bookish-guacamole-spacing-xs solid transparent;
+					border-radius: $bookish-guacamole-border-radius-outstanding;
 				}
 
 				.mat-list-item-content {
-					transition: all $fresh-angular-sidebar-animation-duration ease-out;
-					padding: 0 $fresh-angular-spacing-s;
+					transition: all $bookish-guacamole-sidebar-animation-duration ease-out;
+					padding: 0 $bookish-guacamole-spacing-s;
 					margin-left: 3px;
 					background-color: mat-color($primary);
 
 					.mat-list-icon {
-						transition: all $fresh-angular-sidebar-animation-duration ease-out;
+						transition: all $bookish-guacamole-sidebar-animation-duration ease-out;
 						transform: rotate(-2deg);
 						padding: 0;
 					}
 
 					.mat-list-text {
-						transition: all $fresh-angular-sidebar-animation-duration ease-out;
-						padding-left: $fresh-angular-spacing-s;
+						transition: all $bookish-guacamole-sidebar-animation-duration ease-out;
+						padding-left: $bookish-guacamole-spacing-s;
 					}
 				}
 
@@ -114,7 +114,7 @@
 						}
 
 						.mat-list-text {
-							padding-left: $fresh-angular-spacing-s + $fresh-angular-icon-spacing-default;
+							padding-left: $bookish-guacamole-spacing-s + $bookish-guacamole-icon-spacing-default;
 						}
 					}
 				}
@@ -134,7 +134,7 @@
 						}
 
 						.mat-list-text {
-							padding-left: $fresh-angular-spacing-s + $fresh-angular-icon-spacing-default;
+							padding-left: $bookish-guacamole-spacing-s + $bookish-guacamole-icon-spacing-default;
 						}
 					}
 
@@ -149,7 +149,7 @@
 				}
 
 				&--collapsed {
-					width: $fresh-angular-sidebar-width-collapsed;
+					width: $bookish-guacamole-sidebar-width-collapsed;
 
 					.mat-list-item-content {
 						margin-left: 2px;
