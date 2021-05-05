@@ -1,0 +1,25 @@
+// --------------------------------- //
+// theming for r4 ghost list item    //
+// check component for documentation //
+// --------------------------------- //
+@import "~src/styles/base/variables";
+@import '~@angular/material/theming';
+
+@mixin r4-ghost-list-item-theme($theme) {
+	$foreground: map-get($theme, foreground);
+	$background: map-get($theme, background);
+	$ghost-list-color-card: mat-color($background, card);
+	$ghost-list-color-devider: map-get($foreground, divider);
+
+	.ghost-list-item {
+		background-color: $ghost-list-color-card;
+
+		&__icon {
+			color: $ghost-list-color-devider;
+		}
+
+		&__title {
+			background-color: $ghost-list-color-devider;
+		}
+	}
+}

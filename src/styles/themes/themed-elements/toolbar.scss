@@ -1,0 +1,118 @@
+@import '~@angular/material/theming';
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+@import "~src/styles/base/variables";
+
+@mixin r4-toolbar-theme($theme) {
+	$primary: map-get($theme, primary);
+	$accent: map-get($theme, accent);
+
+	.toolbar {
+		position: fixed;
+		top: 0;
+		right: 0;
+		left: 0;
+		width: 100%;
+		height: $fresh-angular-toolbar-height-default;
+		z-index: $fresh-angular-toolbar-z-index;
+		display: flex;
+		box-sizing: border-box;
+		flex-direction: row;
+		align-items: center;
+		white-space: nowrap;
+		background: mat-color($primary);
+		font-family: $fresh-angular-font-family-outstanding;
+		font-size: $fresh-angular-toolbar-font-size-default;
+
+		.toolbar-brand {
+			height: 100%;
+			width: $fresh-angular-sidebar-width-default;
+			padding-left: $fresh-angular-toolbar-horizontal-spacing-default;
+
+			a {
+				display: flex;
+				align-items: center;
+				height: 100%;
+			}
+		}
+
+		.sidebar-toggle {
+			transition: all $fresh-angular-sidebar-animation-duration ease-in-out;
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			font-size: 0;
+
+			&--open {
+				left: $fresh-angular-sidebar-width-default - $fresh-angular-sidebar-toggle-size;
+			}
+		}
+
+		r4-app-toolbar {
+			position: relative;
+			height: 100%;
+			display: flex;
+			flex: 1 1 auto;
+			align-items: center;
+			justify-content: center;
+		}
+
+		&__item {
+			position: relative;
+			display: flex;
+			height: 100%;
+			align-items: center;
+			color: $fresh-angular-color-white;
+		}
+
+		&__page-title,
+		&__countdown {
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform: translate(-50%,0);
+			padding: 0 $fresh-angular-toolbar-horizontal-spacing-default;
+
+			&--mobile {
+				left: 0;
+				transform: translate(0, 0);
+			}
+		}
+
+		&__user {
+			position: absolute;
+			right: 0;
+			transition: all $fresh-angular-sidebar-animation-duration ease-out;
+			padding: 0 $fresh-angular-toolbar-horizontal-spacing-default 0 (2 * $fresh-angular-toolbar-horizontal-spacing-default);
+			clip-path: polygon($fresh-angular-toolbar-horizontal-spacing-default $fresh-angular-toolbar-horizontal-spacing-default, 100% 0, 100% 100%, 0% 100%);
+			background: mat-color($primary);
+
+			&__count {
+				display: inline-block;
+				margin-right: $fresh-angular-spacing-micro;
+			}
+
+			&--mobile-escape {
+				transform: translateY(-($fresh-angular-toolbar-height-mobile - 1));
+			}
+		}
+
+		&--mobile {
+			top: auto;
+			bottom: 0;
+			height: $fresh-angular-toolbar-height-mobile;
+			padding: 0 0 0 $fresh-angular-sidebar-toggle-size;
+			font-size: $fresh-angular-toolbar-font-size-mobile;
+
+			.sidebar-toggle {
+				&--open {
+					left: 0;
+				}
+			}
+
+			r4-app-toolbar {
+				justify-content: space-between;
+			}
+		}
+	}
+}

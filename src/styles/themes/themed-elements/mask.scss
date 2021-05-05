@@ -1,0 +1,76 @@
+// --------------------------------- //
+// theming for r4 mask elements      //
+// check component for documentation //
+// --------------------------------- //
+@import "~src/styles/base/variables";
+@import "~src/styles/base/mixins";
+@import '~@angular/material/theming';
+
+@mixin r4-mask-theme($theme) {
+	$primary: map-get($theme, primary);
+	$accent: map-get($theme, accent);
+	$background: map-get($theme, background);
+	$mask-color-default: mat-color($background, background);
+	$mask-color-primary: mat-color($primary);
+	$mask-color-card: mat-color($background, card);
+	$mask-color-accent: mat-color($accent);
+	$mask-color-contrast: mat-color($primary, default-contrast);
+
+	.mask {
+		.mask {
+			@include icon-color($mask-color-default) {
+				--var__border-color: #{$mask-color-accent};
+			}
+		}
+
+		// coloring
+		// --------
+		&--primary {
+			.mask {
+				@include icon-color($mask-color-primary) {
+					--var__border-color: #{$mask-color-accent};
+				}
+			}
+		}
+
+		&--card {
+			.mask {
+				@include icon-color($mask-color-card) {
+					--var__border-color: #{$mask-color-accent};
+				}
+			}
+		}
+
+		&--accent {
+			.mask {
+				@include icon-color($mask-color-accent) {
+					--var__border-color: #{$mask-color-primary};
+				}
+			}
+		}
+
+		&--contrast {
+			.mask {
+				@include icon-color($mask-color-contrast) {
+					--var__border-color: #{$mask-color-accent};
+				}
+			}
+		}
+
+		&--black {
+			.mask {
+				@include icon-color($fresh-angular-color-black) {
+					--var__border-color: #{$mask-color-accent};
+				}
+			}
+		}
+
+		&--white {
+			.mask {
+				@include icon-color($fresh-angular-color-white) {
+					--var__border-color: #{$mask-color-accent};
+				}
+			}
+		}
+	}
+}

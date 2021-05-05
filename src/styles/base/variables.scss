@@ -1,0 +1,166 @@
+@import '~@angular/material/theming';
+
+// minor overrides
+// ---------------
+$link-hover-decoration: none;
+$label-margin-bottom: 0;
+
+
+// fonts
+// fallback font families are configured in material base theming
+// --------------------------------------------------------------
+$fresh-angular-font-family-base: 'Lato';
+$fresh-angular-font-family-outstanding: 'Lato';
+$fresh-angular-font-size-base: 16px;
+$fresh-angular-font-size-large: 18px;
+$fresh-angular-line-height-base: 1.5;
+$fresh-angular-font-size-headline: 24px;
+$fresh-angular-line-height-headline: 36px;
+$fresh-angular-font-size-title: 20px;
+$fresh-angular-line-height-title: 32px;
+$fresh-angular-font-size-subheading-2: 16px;
+$fresh-angular-line-height-subheading-2: 28px;
+$fresh-angular-font-size-subheading-1: 15px;
+$fresh-angular-line-height-subheading-1: 24px;
+$fresh-angular-font-size-caption: 14px;
+$fresh-angular-line-height-caption: 20px;
+$fresh-angular-font-size-button: 16px;
+
+
+// sizes & spacings
+// ----------------
+
+// base size
+$fresh-angular-size-default: 36px;
+
+$fresh-angular-spacing-xxxxxxxl: $fresh-angular-size-default * 2; 					// 72px
+$fresh-angular-spacing-xxxxxxl: round($fresh-angular-size-default * 1.8333333333);	// 66px
+$fresh-angular-spacing-xxxxxl: round($fresh-angular-size-default * 1.6666666666); 	// 60px
+$fresh-angular-spacing-xxxxl: round($fresh-angular-size-default * 1.5); 				// 54px
+$fresh-angular-spacing-xxxl: round($fresh-angular-size-default * 1.3333333333); 		// 48px
+$fresh-angular-spacing-xxl: round($fresh-angular-size-default * 1.1666666666); 		// 42px
+$fresh-angular-spacing-xl: $fresh-angular-size-default * 1; 							// 36px
+$fresh-angular-spacing-l: round($fresh-angular-size-default * .8333333333); 			// 30px
+$fresh-angular-spacing-base: round($fresh-angular-size-default * .6666666666); 		// 24px
+$fresh-angular-spacing-m: round($fresh-angular-size-default * .5); 					// 18px
+$fresh-angular-spacing-s: round($fresh-angular-size-default * .3333333333); 			// 12px
+$fresh-angular-spacing-xs: round($fresh-angular-size-default * .1666666666); 			// 6px
+$fresh-angular-spacing-micro: round($fresh-angular-size-default * .0833333333); 		// 3px
+$fresh-angular-spacing-nano: round($fresh-angular-size-default * .0555555555); 		// 2px
+
+
+// breakpoints for bootstrap grid
+// ------------------------------
+$spacer: $fresh-angular-size-default;
+$grid-gutter-width: $spacer;
+
+$grid-breakpoints: (
+	xs: 0,
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1200px
+);
+
+
+// app brand
+// ----------
+$fresh-angular-brand-logo-size-default: 40px;
+$fresh-angular-brand-logo-size-handset: 32px;
+$fresh-angular-brand-logo-spacing-handset: 2px;
+$fresh-angular-brand-title-size-default: 20px;
+$fresh-angular-brand-title-size-handset: 16px;
+
+
+// app colors
+// ----------
+
+// green
+$fresh-angular-color-green-light: #009688;
+$fresh-angular-color-green-default: #057B85;
+$fresh-angular-color-green-dark: #047179;
+$fresh-angular-color-green-darker: #0E4E56;
+
+// orange
+$fresh-angular-color-orange-default: #FF9800;
+
+// white
+$fresh-angular-color-white: #FFFFFF;
+
+// black
+$fresh-angular-color-black: #333333;
+
+// grey
+$fresh-angular-color-grey1: #9E9E9E;
+
+// brand colors
+$fresh-angular-color-brand-logo: $fresh-angular-color-orange-default;
+$fresh-angular-color-brand-title: $fresh-angular-color-orange-default;
+$fresh-angular-color-brand-beta: $fresh-angular-color-white;
+
+// material color map
+$fresh-angular-brand-color-map: (
+	100: $fresh-angular-color-green-light,
+	200: $fresh-angular-color-green-default,
+	300: $fresh-angular-color-green-dark,
+	400: $fresh-angular-color-green-darker,
+	contrast: (
+		100: $light-secondary-text,
+		200: $light-primary-text,
+		300: $light-primary-text,
+	)
+);
+
+// text link colors
+$fresh-angular-color-text-link: $fresh-angular-color-green-dark;
+$fresh-angular-background-text-link: transparent;
+
+$success-colors: mat-palette($mat-green, 400);
+$warning-colors: mat-palette($mat-amber, 400);
+
+
+// layout and ui elements
+// ---------------
+
+// images
+$fresh-angular-image-width-default: 600px;
+$fresh-angular-image-height-default: 400px;
+
+// icons
+$fresh-angular-icon-size-default: 24px;
+$fresh-angular-icon-space-default: 48px;
+$fresh-angular-icon-spacing-default: 2px;
+$fresh-angular-icon-spacing-l: 4px;
+
+// mikado
+$fresh-angular-mikado-size-default: $fresh-angular-icon-space-default;
+
+// button
+$fresh-angular-button-size-default: 36px;
+
+// toolbar
+$toolbar-breakpoint: map-get($grid-breakpoints, md);
+$fresh-angular-toolbar-z-index: $cdk-z-index-overlay-backdrop - 1;
+$fresh-angular-toolbar-height-default: 60px;
+$fresh-angular-toolbar-height-mobile: $fresh-angular-icon-space-default;
+$fresh-angular-toolbar-font-size-default: $fresh-angular-font-size-large;
+$fresh-angular-toolbar-font-size-mobile: $fresh-angular-font-size-base;
+$fresh-angular-toolbar-horizontal-spacing-default: round($grid-gutter-width / 3);
+
+// navigation sidebar
+$fresh-angular-sidebar-width-default: 220px;
+$fresh-angular-sidebar-width-collapsed: $fresh-angular-icon-space-default;
+$fresh-angular-sidebar-animation-duration: 225ms;
+$fresh-angular-sidebar-toggle-size: $fresh-angular-icon-space-default;
+
+
+// transition
+// ----------
+$fresh-angular-transition-default: 250ms;
+
+
+// border radius
+// -------------
+$fresh-angular-border-radius-default: 4px;
+$fresh-angular-border-radius-outstanding: 100% 10% 100% 10% / 10% 100% 10% 100%;
+$fresh-angular-border-radius-outstanding-hover: 10% 100% 10% 100% / 100% 10% 100% 10%;

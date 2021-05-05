@@ -1,0 +1,39 @@
+// ------------------------------------- //
+// theming for r4 collect success dialog //
+// see component for ducumentation       //
+// ------------------------------------- //
+@import '~@angular/material/theming';
+@import "~src/styles/base/variables";
+
+$collect-dialog-crowns-font-size: 120px;
+
+@mixin r4-collect-dialog-theme($theme) {
+	$primary: map-get($theme, primary);
+	$accent: map-get($theme, accent);
+	$background: map-get($theme, background);
+	$collect-dialog-color-primary: mat-color($primary);
+	$collect-dialog-color-accent: mat-color($accent);
+
+	.collect-dialog {
+		.mat-dialog-container {
+			background: $collect-dialog-color-primary;
+			color: $fresh-angular-color-white;
+		}
+
+		.crowns {
+			position: absolute;
+			top: 1%;
+			left: 1%;
+			height: 98%;
+			width: 98%;
+			font-family: $fresh-angular-font-family-outstanding;
+			font-size: $collect-dialog-crowns-font-size;
+			font-weight: bolder;
+			background: $fresh-angular-color-white;
+			color: $collect-dialog-color-accent;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+}

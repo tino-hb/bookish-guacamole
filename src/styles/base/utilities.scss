@@ -1,0 +1,19 @@
+@import "./variables";
+@import "./mixins";
+
+.clickable {
+	@include unselectable();
+	cursor: pointer;
+}
+
+.text-bold {
+	font-weight: bolder;
+}
+
+.text-large {
+	font-size: $fresh-angular-font-size-large;
+}
+
+.text-small {
+	font-size: $fresh-angular-font-size-caption;
+}
