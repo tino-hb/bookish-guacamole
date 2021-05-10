@@ -1,5 +1,5 @@
 // --------------------------------- //
-// theming for r4 mikado element     //
+// theming for bookish-guacamole mikado element     //
 // check component for documentation //
 // --------------------------------- //
 @import "~src/styles/base/variables";
@@ -15,7 +15,7 @@ $mikado-line-size: 1px;
 $mikado-vertical-center: ($mikado-height / 2) - ($mikado-line-size);
 $mikado-transition-default: $bookish-guacamole-transition-default;
 
-@mixin r4-mikado-theme($theme) {
+@mixin bookish-guacamole-mikado-theme($theme) {
 	$primary: map-get($theme, primary);
 	$accent: map-get($theme, accent);
 	$foreground: map-get($theme, foreground);

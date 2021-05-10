@@ -1,11 +1,11 @@
 // --------------------------------- //
-// theming for r4 ghost list item    //
+// theming for bookish-guacamole ghost list item    //
 // check component for documentation //
 // --------------------------------- //
 @import "~src/styles/base/variables";
 @import '~@angular/material/theming';
 
-@mixin r4-ghost-list-item-theme($theme) {
+@mixin bookish-guacamole-ghost-list-item-theme($theme) {
 	$foreground: map-get($theme, foreground);
 	$background: map-get($theme, background);
 	$ghost-list-color-card: mat-color($background, card);

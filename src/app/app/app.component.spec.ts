@@ -23,13 +23,13 @@ describe('AppComponent', () => {
   it(`should have as title 'bookish-guacamole'`, () => {
     const fixture = TestBed.createComponent(AppComponent)
     const app = fixture.componentInstance
-    expect(app.title).toEqual('bookish-guacamole')
+    expect(app.title).toEqual('Bookish Guacamole')
   })
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent)
     fixture.detectChanges()
     const compiled = fixture.nativeElement
-    expect(compiled.querySelector('.content span').textContent).toContain('bookish-guacamole app is running!')
+    expect(compiled.querySelector('.sidenav__logo__title').textContent).toContain('Bookish Guacamole')
   })
 })

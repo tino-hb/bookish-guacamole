@@ -7,7 +7,7 @@
 
 $divider-text-spacing: 1.5%;
 
-@mixin r4-divider-heading-theme($theme) {
+@mixin bookish-guacamole-divider-heading-theme($theme) {
 	$foreground: map-get($theme, foreground);
 	$divider: map-get($foreground, divider);
 

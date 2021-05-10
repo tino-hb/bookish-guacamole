@@ -1,5 +1,5 @@
 // ------------------------------------- //
-// theming for r4 collect success dialog //
+// theming for bookish-guacamole collect success dialog //
 // see component for ducumentation       //
 // ------------------------------------- //
 @import '~@angular/material/theming';
@@ -7,7 +7,7 @@
 
 $collect-dialog-crowns-font-size: 120px;
 
-@mixin r4-collect-dialog-theme($theme) {
+@mixin bookish-guacamole-collect-dialog-theme($theme) {
 	$primary: map-get($theme, primary);
 	$accent: map-get($theme, accent);
 	$background: map-get($theme, background);

@@ -5,7 +5,7 @@
 @import '~@angular/material/theming';
 @import "~src/styles/base/variables";
 
-@mixin r4-svg-fill-theme($theme) {
+@mixin bookish-guacamole-svg-fill-theme($theme) {
 	$primary: map-get($theme, primary);
 	$accent: map-get($theme, accent);
 	$background: map-get($theme, background);

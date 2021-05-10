@@ -1,12 +1,12 @@
 // --------------------------------- //
-// theming for r4 mask elements      //
+// theming for bookish-guacamole mask elements      //
 // check component for documentation //
 // --------------------------------- //
 @import "~src/styles/base/variables";
 @import "~src/styles/base/mixins";
 @import '~@angular/material/theming';
 
-@mixin r4-mask-theme($theme) {
+@mixin bookish-guacamole-mask-theme($theme) {
 	$primary: map-get($theme, primary);
 	$accent: map-get($theme, accent);
 	$background: map-get($theme, background);

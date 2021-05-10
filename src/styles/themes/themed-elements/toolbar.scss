@@ -3,7 +3,7 @@
 @import "~bootstrap/scss/mixins";
 @import "~src/styles/base/variables";
 
-@mixin r4-toolbar-theme($theme) {
+@mixin bookish-guacamole-toolbar-theme($theme) {
 	$primary: map-get($theme, primary);
 	$accent: map-get($theme, accent);
 
@@ -48,7 +48,7 @@
 			}
 		}
 
-		r4-app-toolbar {
+		bookish-guacamole-app-toolbar {
 			position: relative;
 			height: 100%;
 			display: flex;
@@ -110,7 +110,7 @@
 				}
 			}
 
-			r4-app-toolbar {
+			bookish-guacamole-app-toolbar {
 				justify-content: space-between;
 			}
 		}

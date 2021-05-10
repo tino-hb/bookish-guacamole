@@ -2,7 +2,7 @@
 @import "~src/styles/base/variables";
 @import "~src/styles/base/mixins";
 
-@mixin r4-styles-reset-theme($theme) {
+@mixin bookish-guacamole-styles-reset-theme($theme) {
 	$primary: map-get($theme, primary);
 	$accent: map-get($theme, accent);
 	$warn: map-get($theme, warn);

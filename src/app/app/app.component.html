@@ -1,0 +1,48 @@
+<div class="bookish-guacamole-theme-wrapper default-theme">
+  <mat-sidenav-container class="sidenav-container">
+    <mat-sidenav
+      #drawer
+      class="sidenav"
+      style="background-image: url('assets/sidebar_bg.jpg');"
+      fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false"
+    >
+      <div class="sidenav__logo">
+        <img
+          class="sidenav__logo__image"
+          alt="Logo"
+          src="assets/logo_small.jpg"
+        />
+        <span class="sidenav__logo__title">{{ title }}</span>
+      </div>
+      <mat-divider></mat-divider>
+      <div class="sidenav__list">
+        <a
+          *ngFor="let item of navigationItems"
+          routerLink="{{ item.path }}"
+          [routerLinkActive]="'sidenav__list__item--active'"
+          class="sidenav__list__item"
+        >
+          <mat-icon class="sidenav__list__item__icon">{{ item.icon }}</mat-icon>
+          {{ item.label }}
+        </a>
+      </div>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <mat-toolbar>
+        <button
+          type="button"
+          aria-label="Toggle sidenav"
+          mat-icon-button
+          (click)="drawer.toggle()"
+          *ngIf="isHandset$ | async"
+        >
+          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        </button>
+      </mat-toolbar>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

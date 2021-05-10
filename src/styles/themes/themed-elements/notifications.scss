@@ -1,7 +1,7 @@
 @import "~src/styles/base/variables";
 @import '~@angular/material/theming';
 
-@mixin r4-notifications-theme($theme) {
+@mixin bookish-guacamole-notifications-theme($theme) {
 	$accent: map-get($theme, accent);
 	$warn: map-get($theme, warn);
 

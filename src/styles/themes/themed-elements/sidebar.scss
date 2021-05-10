@@ -1,7 +1,7 @@
 @import "~src/styles/base/variables";
 @import '~@angular/material/theming';
 
-@mixin r4-sidebar-theme($theme) {
+@mixin bookish-guacamole-sidebar-theme($theme) {
 	$primary: map-get($theme, primary);
 	$accent: map-get($theme, accent);
 	$foreground: map-get($theme, foreground);

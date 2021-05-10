@@ -2,10 +2,10 @@
 @import "~src/styles/base/variables";
 @import "~src/styles/base/mixins";
 
-@mixin r4-button-theme($theme) {
+@mixin bookish-guacamole-button-theme($theme) {
 	$accent: map-get($theme, accent);
 
-	.button {
+	.bookish-guacamole-button {
 		@include unselectable();
 		@include text-truncate();
 		cursor: pointer;
@@ -29,7 +29,7 @@
 			align-items: center;
 		}
 
-		r4-icon {
+		bookish-guacamole-icon {
 			flex-shrink: 0;
 			font-size: 1.4em;
 			margin-right: $bookish-guacamole-icon-spacing-l;

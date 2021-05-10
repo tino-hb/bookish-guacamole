@@ -76,13 +76,16 @@ $bookish-guacamole-brand-title-size-handset: 16px;
 // ----------
 
 // green
-$bookish-guacamole-color-green-light: #009688;
-$bookish-guacamole-color-green-default: #057B85;
-$bookish-guacamole-color-green-dark: #047179;
-$bookish-guacamole-color-green-darker: #0E4E56;
+$bookish-guacamole-color-green-default: #0F596E;
+$bookish-guacamole-color-green-light: #30889C;
+$bookish-guacamole-color-green-dark: #0E4D5E;
+$bookish-guacamole-color-green-darker: #0C3F4C;
 
 // orange
-$bookish-guacamole-color-orange-default: #FF9800;
+$bookish-guacamole-color-orange-default: #EB6012;
+$bookish-guacamole-color-orange-light: #F2874F;
+$bookish-guacamole-color-orange-dark: #D05613;
+$bookish-guacamole-color-orange-darker: #B84D11;
 
 // white
 $bookish-guacamole-color-white: #FFFFFF;
@@ -93,23 +96,35 @@ $bookish-guacamole-color-black: #333333;
 // grey
 $bookish-guacamole-color-grey1: #9E9E9E;
 
+// material color map
+$bookish-guacamole-primary-color-map: (
+  100: $bookish-guacamole-color-green-light,
+  200: $bookish-guacamole-color-green-default,
+  300: $bookish-guacamole-color-green-dark,
+  400: $bookish-guacamole-color-green-darker,
+  contrast: (
+    100: $light-secondary-text,
+    200: $light-primary-text,
+    300: $light-primary-text,
+  )
+);
+
+$bookish-guacamole-accent-color-map: (
+  100: $bookish-guacamole-color-orange-light,
+  200: $bookish-guacamole-color-orange-default,
+  300: $bookish-guacamole-color-orange-dark,
+  400: $bookish-guacamole-color-orange-darker,
+  contrast: (
+    100: $light-secondary-text,
+    200: $light-primary-text,
+    300: $light-primary-text,
+  )
+);
+
 // brand colors
 $bookish-guacamole-color-brand-logo: $bookish-guacamole-color-orange-default;
 $bookish-guacamole-color-brand-title: $bookish-guacamole-color-orange-default;
 $bookish-guacamole-color-brand-beta: $bookish-guacamole-color-white;
-
-// material color map
-$bookish-guacamole-brand-color-map: (
-	100: $bookish-guacamole-color-green-light,
-	200: $bookish-guacamole-color-green-default,
-	300: $bookish-guacamole-color-green-dark,
-	400: $bookish-guacamole-color-green-darker,
-	contrast: (
-		100: $light-secondary-text,
-		200: $light-primary-text,
-		300: $light-primary-text,
-	)
-);
 
 // text link colors
 $bookish-guacamole-color-text-link: $bookish-guacamole-color-green-dark;
@@ -148,7 +163,7 @@ $bookish-guacamole-toolbar-font-size-mobile: $bookish-guacamole-font-size-base;
 $bookish-guacamole-toolbar-horizontal-spacing-default: round($grid-gutter-width / 3);
 
 // navigation sidebar
-$bookish-guacamole-sidebar-width-default: 220px;
+$bookish-guacamole-sidebar-width-default: 260px;
 $bookish-guacamole-sidebar-width-collapsed: $bookish-guacamole-icon-space-default;
 $bookish-guacamole-sidebar-animation-duration: 225ms;
 $bookish-guacamole-sidebar-toggle-size: $bookish-guacamole-icon-space-default;
