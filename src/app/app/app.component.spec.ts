@@ -1,12 +1,26 @@
 import { TestBed } from '@angular/core/testing'
+import { provideMockStore } from '@ngrx/store/testing'
+import { NoopAnimationsModule } from '@angular/platform-browser/animations'
 import { RouterTestingModule } from '@angular/router/testing'
+
 import { AppComponent } from './app.component'
+import { SharedModule } from '../shared/shared.module'
+import { testAppState } from '../core/core.state'
+import { CoreModule } from '../core/core.module'
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
+        CoreModule,
+        SharedModule,
         RouterTestingModule,
+        NoopAnimationsModule,
+      ],
+      providers: [
+        provideMockStore({
+          initialState: testAppState,
+        }),
       ],
       declarations: [
         AppComponent,

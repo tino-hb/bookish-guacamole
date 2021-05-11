@@ -1,13 +1,13 @@
-<div class="bookish-guacamole-theme-wrapper default-theme">
+<div class="bookish-guacamole-theme-wrapper {{ theme$ | async }}-theme">
   <mat-sidenav-container class="sidenav-container">
     <mat-sidenav
       #drawer
       class="sidenav"
       style="background-image: url('assets/sidebar_bg.jpg');"
       fixedInViewport
-      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-      [mode]="(isHandset$ | async) ? 'over' : 'side'"
-      [opened]="(isHandset$ | async) === false"
+      [attr.role]="(isMobile$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isMobile$ | async) ? 'over' : 'side'"
+      [opened]="(isMobile$ | async) === false"
     >
       <div class="sidenav__logo">
         <img
@@ -31,16 +31,28 @@
       </div>
     </mat-sidenav>
     <mat-sidenav-content>
-      <mat-toolbar>
+      <mat-toolbar class="flex-column align-items-end justify-content-center">
         <button
           type="button"
           aria-label="Toggle sidenav"
           mat-icon-button
           (click)="drawer.toggle()"
-          *ngIf="isHandset$ | async"
+          *ngIf="isMobile$ | async"
         >
           <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
         </button>
+        <mat-slide-toggle
+          color="accent"
+          [checked]="isDarkTheme"
+          (change)="onThemeToggle()"
+        >
+          <mat-icon
+            [color]="isDarkTheme ? 'accent' : undefined"
+            inline
+          >
+            nightlight_round
+          </mat-icon>
+        </mat-slide-toggle>
       </mat-toolbar>
       <router-outlet></router-outlet>
     </mat-sidenav-content>

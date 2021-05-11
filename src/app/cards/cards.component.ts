@@ -1,5 +1,7 @@
 import { Component } from '@angular/core'
 
+import { NotificationService } from '../core/ui/services/notification.service'
+
 @Component({
   selector: 'app-cards',
   templateUrl: './cards.component.html',
@@ -9,5 +11,11 @@ import { Component } from '@angular/core'
 })
 export class CardsComponent {
 
-  constructor() { }
+  constructor(
+    private notificationService: NotificationService,
+  ) { }
+
+  onLikeButtonClick (): void {
+    this.notificationService.default('Cuddle me', 3500)
+  }
 }

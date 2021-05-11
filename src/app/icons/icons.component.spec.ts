@@ -1,5 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing'
+import { RouterTestingModule } from '@angular/router/testing'
+import { NoopAnimationsModule } from '@angular/platform-browser/animations'
 
+import { CoreModule } from '../core/core.module'
+import { SharedModule } from '../shared/shared.module'
 import { IconsComponent } from './icons.component'
 
 describe('IconsComponent', () => {
@@ -8,8 +12,14 @@ describe('IconsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports: [
+        CoreModule,
+        SharedModule,
+        RouterTestingModule,
+        NoopAnimationsModule,
+      ],
       declarations: [
-        IconsComponent, 
+        IconsComponent,
       ],
     })
       .compileComponents()

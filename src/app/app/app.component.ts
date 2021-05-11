@@ -1,8 +1,8 @@
 import { Component } from '@angular/core'
-import { Observable } from "rxjs"
-import { BreakpointObserver, Breakpoints } from "@angular/cdk/layout"
-import { map, shareReplay } from "rxjs/operators"
 import { NavigationItem } from "./types/navigation"
+import { actionSettingsChangeTheme, SettingsFacadeService, Theme } from '../core/settings'
+import { UiFacadeService } from '../core/ui'
+import { Subscription } from 'rxjs'
 
 @Component({
   selector: 'app-root',
@@ -12,8 +12,22 @@ import { NavigationItem } from "./types/navigation"
   ],
 })
 export class AppComponent {
-  constructor(private breakpointObserver: BreakpointObserver) {}
   title = 'Bookish Guacamole'
+
+  isMobile$ = this.uiFacadeService.isMobile$
+
+  theme$ = this.settingsFacadeService.theme$
+  isDarkTheme: boolean = false
+  themeSubscription: Subscription
+
+  constructor(
+    private settingsFacadeService: SettingsFacadeService,
+    private uiFacadeService: UiFacadeService,
+  ) {
+    this.themeSubscription = this.theme$.subscribe((theme: Theme) => {
+      this.isDarkTheme = theme === 'dark'
+    })
+  }
 
   navigationItems: NavigationItem[] = [
     {
@@ -48,9 +62,9 @@ export class AppComponent {
     },
   ]
 
-  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
-    .pipe(
-      map(result => result.matches),
-      shareReplay(),
-    )
+  onThemeToggle() {
+    const theme: Theme = this.isDarkTheme ? 'default' : 'dark'
+
+    this.settingsFacadeService.dispatch(actionSettingsChangeTheme({ theme }))
+  }
 }
