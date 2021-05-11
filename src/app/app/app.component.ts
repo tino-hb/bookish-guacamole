@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core'
+import { Component } from '@angular/core'
 import { Observable } from "rxjs"
 import { BreakpointObserver, Breakpoints } from "@angular/cdk/layout"
 import { map, shareReplay } from "rxjs/operators"
@@ -40,6 +40,11 @@ export class AppComponent {
       path: '/forms',
       label: 'Forms',
       icon: 'dns',
+    },
+    {
+      path: '/cards',
+      label: 'Cards',
+      icon: 'crop_original',
     },
   ]
 
