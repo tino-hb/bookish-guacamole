@@ -1,14 +1,14 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing'
-import { NoopAnimationsModule } from '@angular/platform-browser/animations'
 import { RouterTestingModule } from '@angular/router/testing'
+import { NoopAnimationsModule } from '@angular/platform-browser/animations'
 
-import { CardsComponent } from './cards.component'
-import { CoreModule } from '../core/core.module'
-import { SharedModule } from '../shared/shared.module'
+import { CoreModule } from '../../core/core.module'
+import { SharedModule } from '../../shared/shared.module'
+import { IconsComponent } from './icons.component'
 
-describe('CardsComponent', () => {
-  let component: CardsComponent
-  let fixture: ComponentFixture<CardsComponent>
+describe('IconsComponent', () => {
+  let component: IconsComponent
+  let fixture: ComponentFixture<IconsComponent>
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -19,14 +19,14 @@ describe('CardsComponent', () => {
         NoopAnimationsModule,
       ],
       declarations: [
-        CardsComponent,
+        IconsComponent,
       ],
     })
       .compileComponents()
   })
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CardsComponent)
+    fixture = TestBed.createComponent(IconsComponent)
     component = fixture.componentInstance
     fixture.detectChanges()
   })

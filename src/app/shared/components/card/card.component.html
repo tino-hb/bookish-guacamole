@@ -1,0 +1,22 @@
+<mat-card class="bookish-guacamole-card">
+  <mat-card-header
+    *ngIf="cardTitle"
+    class="bookish-guacamole-card__header"
+  >
+    <mat-card-title class="mb-0">
+      {{cardTitle}}
+    </mat-card-title>
+  </mat-card-header>
+  <img
+    *ngIf="cardImageUrl"
+    mat-card-image
+    [src]="cardImageUrl"
+    alt=""
+  >
+  <mat-card-content class="bookish-guacamole-card__content mb-0">
+    <ng-content select="[cardContent]"></ng-content>
+  </mat-card-content>
+  <mat-card-footer class="wrapper bookish-guacamole-card__actions mt-3">
+    <ng-content select="[cardFooter]"></ng-content>
+  </mat-card-footer>
+</mat-card>

@@ -15,6 +15,7 @@
       padding-bottom: $bookish-guacamole-sidebar-toggle-size;
       border-right-width: 0;
       width: $bookish-guacamole-sidebar-width-default;
+      background-size: cover;
       box-shadow: 0 16px 38px -12px rgb(0 0 0 / 56%), 0 4px 25px 0 rgb(0 0 0 / 12%), 0 8px 10px -5px rgb(0 0 0 / 20%);
       display: flex;
       flex-direction: column;
@@ -95,7 +96,7 @@
           &--active {
             color: $bookish-guacamole-color-white;
             background-color: mat-color($accent) !important;
-            box-shadow: 0 4px 20px 0 rgb(0 0 0 / 14%), 0 7px 10px -5px rgb(235 96 18 / 61%);
+            box-shadow: 0 4px 20px 0 rgb(0 0 0 / 14%), 0 7px 10px -5px rgba(mat-color($accent), 0.6);
 
             * {
               color: $bookish-guacamole-color-white;
