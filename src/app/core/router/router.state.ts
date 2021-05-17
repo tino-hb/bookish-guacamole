@@ -7,10 +7,10 @@ import { AppState } from '../core.state'
 export const stateRouter = 'router'
 
 export type RouterStateUrl = {
-	url: string;
-	params: Params;
-	queryParams: Params;
-};
+	url: string,
+	params: Params,
+	queryParams: Params,
+}
 
 export const selectRouterState = createFeatureSelector<AppState, RouterReducerState<RouterStateUrl>>(
   stateRouter,

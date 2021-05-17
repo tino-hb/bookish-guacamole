@@ -7,7 +7,7 @@ import { selectSettingsTheme } from '../selectors/settings.selectors'
 
 @Injectable()
 export class SettingsFacadeService {
-	theme$: Observable<Theme>;
+	theme$: Observable<Theme>
 
 	constructor(private store: Store<State>) {
 

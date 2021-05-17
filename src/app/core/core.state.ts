@@ -10,7 +10,7 @@ export type AppState = {
 	[stateRouter]: RouterReducerState<RouterStateUrl>,
 	[stateUi]: UiState,
   [stateSettings]: SettingsState,
-};
+}
 
 export const reducers: ActionReducerMap<AppState> = {
   router: routerReducer,

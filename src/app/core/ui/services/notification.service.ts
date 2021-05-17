@@ -9,9 +9,9 @@ import { UiFacadeService } from './ui.facade.service'
 })
 export class NotificationService {
 
-	isMobile: boolean | undefined;
-	isMobile$ = this.uiFacadeService.isMobile$;
-	isMobileSubscription: Subscription;
+	isMobile: boolean | undefined
+	isMobile$ = this.uiFacadeService.isMobile$
+	isMobileSubscription: Subscription
 
 	constructor(
 		private readonly snackBar: MatSnackBar,

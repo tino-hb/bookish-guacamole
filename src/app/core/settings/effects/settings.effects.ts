@@ -40,7 +40,7 @@ export class SettingsEffects {
 	    ),
 	  ),
 	{ dispatch: false },
-	);
+	)
 
 	effectChangeTheme = createEffect(() =>
 	  merge(INIT, this.actions$.pipe(
@@ -63,5 +63,5 @@ export class SettingsEffects {
 	      classList.add(effectiveTheme + '-theme')
 	    }),
 	  ), { dispatch: false },
-	);
+	)
 }

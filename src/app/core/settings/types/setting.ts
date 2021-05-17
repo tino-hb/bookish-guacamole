@@ -1,13 +1,13 @@
 import { AppState } from '../../core.state'
 
 export interface SettingsState {
-	theme: Theme;
+	theme: Theme,
 }
 
 export interface State extends AppState {
-	settings: SettingsState;
+	settings: SettingsState,
 }
 
-export type Theme = 'default' | 'dark';
+export type Theme = 'default' | 'dark'
 
 export const testTheme: Theme = 'dark'

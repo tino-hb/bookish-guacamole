@@ -11,10 +11,10 @@ import { mobileBreakpointWidth } from './ui.constants.service'
 @Injectable()
 export class UiFacadeService {
 
-	isMobile$: Observable<boolean>;
+	isMobile$: Observable<boolean>
 
-	readRequestLoading$: Observable<boolean>;
-	writeRequestLoading$: Observable<boolean>;
+	readRequestLoading$: Observable<boolean>
+	writeRequestLoading$: Observable<boolean>
 
 	constructor(
 		private breakpointObserver: BreakpointObserver,
