@@ -3,10 +3,11 @@ import { provideMockStore } from '@ngrx/store/testing'
 import { NoopAnimationsModule } from '@angular/platform-browser/animations'
 import { RouterTestingModule } from '@angular/router/testing'
 
+// @ts-ignore
+import { CoreModule } from '@core/core.module'
+import { SharedModule } from '@shared/shared.module'
 import { AppComponent } from './app.component'
-import { SharedModule } from '../shared/shared.module'
 import { testAppState } from '../core/core.state'
-import { CoreModule } from '../core/core.module'
 
 describe('AppComponent', () => {
   beforeEach(async () => {

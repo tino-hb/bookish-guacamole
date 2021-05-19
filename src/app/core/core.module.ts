@@ -4,12 +4,14 @@ import { StoreModule } from '@ngrx/store'
 import { StoreRouterConnectingModule } from '@ngrx/router-store'
 import { EffectsModule } from '@ngrx/effects'
 import { StoreDevtoolsModule } from '@ngrx/store-devtools'
+import { MarkdownModule, MarkedOptions } from 'ngx-markdown'
 
 import { environment } from '../../environments/environment'
 import { metaReducers, reducers } from './core.state'
 import { UiModule } from './ui'
 import { StorageModule } from './storage'
 import { SettingsEffects, SettingsModule } from './settings'
+import { markedOptionsFactory } from './markdown'
 
 @NgModule({
   declarations: [],
@@ -25,6 +27,14 @@ import { SettingsEffects, SettingsModule } from './settings'
 
     // redux dev tools
     environment.production ? [] : StoreDevtoolsModule.instrument({ name: environment.appName }),
+
+    // core markdown rendering config
+    MarkdownModule.forRoot({
+      markedOptions: {
+        provide: MarkedOptions,
+        useFactory: markedOptionsFactory,
+      },
+    }),
 
     // local- and session-storage and cookies services
     StorageModule,

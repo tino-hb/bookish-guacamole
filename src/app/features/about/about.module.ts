@@ -5,6 +5,7 @@ import { SharedModule } from '@shared/shared.module'
 import { AboutRoutingModule } from './about-routing.module'
 import { AboutPageComponent } from './pages/about-page'
 import { AboutComponent } from './components/about'
+import { MarkdownModule } from 'ngx-markdown'
 
 @NgModule({
   imports: [
@@ -13,6 +14,9 @@ import { AboutComponent } from './components/about'
 
     // shared resources
     SharedModule,
+
+    // markdown rendering support for feature module
+    MarkdownModule.forChild(),
   ],
   declarations: [
     AboutPageComponent,
