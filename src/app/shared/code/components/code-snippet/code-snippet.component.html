@@ -17,9 +17,15 @@
     <button
       mat-stroked-button
       color="accent"
-      [cdkCopyToClipboard]="componentTemplate.templateText"
+      (click)="onCopyCodeClick()"
     >
-      <mat-icon>content_copy</mat-icon>
+      <mat-icon
+        *ngIf="copied else notCopied"
+        [@copyIconAnimation]
+      >check_circle_outline</mat-icon>
+      <ng-template #notCopied>
+        <mat-icon [@copyIconAnimation]>content_copy</mat-icon>
+      </ng-template>
       Copy code
     </button>
   </pre>

@@ -1,4 +1,4 @@
-@import '~@angular/material/theming';
+@use '~@angular/material' as mat;
 
 // minor overrides
 // ---------------
@@ -77,15 +77,13 @@ $bookish-guacamole-brand-title-size-handset: 16px;
 
 // green
 $bookish-guacamole-color-green-default: #0F596E;
-$bookish-guacamole-color-green-light: #30889C;
-$bookish-guacamole-color-green-dark: #0E4D5E;
-$bookish-guacamole-color-green-darker: #0C3F4C;
+$bookish-guacamole-color-green-light: #48869C;
+$bookish-guacamole-color-green-dark: #003043;
 
 // orange
 $bookish-guacamole-color-orange-default: #EB6012;
-$bookish-guacamole-color-orange-light: #F2874F;
-$bookish-guacamole-color-orange-dark: #D05613;
-$bookish-guacamole-color-orange-darker: #B84D11;
+$bookish-guacamole-color-orange-light: #FF9145;
+$bookish-guacamole-color-orange-dark: #B12F00;
 
 // white
 $bookish-guacamole-color-white: #FFFFFF;
@@ -96,16 +94,26 @@ $bookish-guacamole-color-black: #333333;
 // grey
 $bookish-guacamole-color-grey1: #9E9E9E;
 
+$bookish-guacamole-dark-primary-text: rgba(black, 0.87);
+$bookish-guacamole-dark-secondary-text: rgba(black, 0.54);
+$bookish-guacamole-dark-disabled-text: rgba(black, 0.38);
+$bookish-guacamole-dark-dividers: rgba(black, 0.12);
+$bookish-guacamole-dark-focused: rgba(black, 0.12);
+$bookish-guacamole-light-primary-text: white;
+$bookish-guacamole-light-secondary-text: rgba(white, 0.7);
+$bookish-guacamole-light-disabled-text: rgba(white, 0.5);
+$bookish-guacamole-light-dividers: rgba(white, 0.12);
+$bookish-guacamole-light-focused: rgba(white, 0.12);
+
 // material color map
 $bookish-guacamole-primary-color-map: (
   100: $bookish-guacamole-color-green-light,
   200: $bookish-guacamole-color-green-default,
   300: $bookish-guacamole-color-green-dark,
-  400: $bookish-guacamole-color-green-darker,
   contrast: (
-    100: $light-secondary-text,
-    200: $light-primary-text,
-    300: $light-primary-text,
+    100: $bookish-guacamole-light-secondary-text,
+    200: $bookish-guacamole-light-primary-text,
+    300: $bookish-guacamole-light-primary-text,
   )
 );
 
@@ -113,11 +121,10 @@ $bookish-guacamole-accent-color-map: (
   100: $bookish-guacamole-color-orange-light,
   200: $bookish-guacamole-color-orange-default,
   300: $bookish-guacamole-color-orange-dark,
-  400: $bookish-guacamole-color-orange-darker,
   contrast: (
-    100: $light-secondary-text,
-    200: $light-primary-text,
-    300: $light-primary-text,
+    100: $bookish-guacamole-light-primary-text,
+    200: $bookish-guacamole-light-primary-text,
+    300: $bookish-guacamole-light-primary-text,
   )
 );
 
@@ -130,8 +137,8 @@ $bookish-guacamole-color-brand-beta: $bookish-guacamole-color-white;
 $bookish-guacamole-color-text-link: $bookish-guacamole-color-green-dark;
 $bookish-guacamole-background-text-link: transparent;
 
-$success-colors: mat-palette($mat-green, 400);
-$warning-colors: mat-palette($mat-amber, 400);
+$success-colors: mat.define-palette(mat.$green-palette, 400);
+$warning-colors: mat.define-palette(mat.$amber-palette, 400);
 
 
 // layout and ui elements
@@ -155,7 +162,7 @@ $bookish-guacamole-button-size-default: 36px;
 
 // toolbar
 $toolbar-breakpoint: map-get($grid-breakpoints, md);
-$bookish-guacamole-toolbar-z-index: $cdk-z-index-overlay-backdrop - 1;
+$bookish-guacamole-toolbar-z-index: 999;
 $bookish-guacamole-toolbar-height-default: 60px;
 $bookish-guacamole-toolbar-height-mobile: $bookish-guacamole-icon-space-default;
 $bookish-guacamole-toolbar-font-size-default: $bookish-guacamole-font-size-large;

@@ -2,7 +2,7 @@
 // theming for bookish-guacamole collect success dialog //
 // see component for ducumentation       //
 // ------------------------------------- //
-@import '~@angular/material/theming';
+@use '~@angular/material' as mat;
 @import "~src/styles/base/variables";
 
 $collect-dialog-crowns-font-size: 120px;
@@ -11,8 +11,8 @@ $collect-dialog-crowns-font-size: 120px;
 	$primary: map-get($theme, primary);
 	$accent: map-get($theme, accent);
 	$background: map-get($theme, background);
-	$collect-dialog-color-primary: mat-color($primary);
-	$collect-dialog-color-accent: mat-color($accent);
+	$collect-dialog-color-primary: mat.get-color-from-palette($primary);
+	$collect-dialog-color-accent: mat.get-color-from-palette($accent);
 
 	.collect-dialog {
 		.mat-dialog-container {

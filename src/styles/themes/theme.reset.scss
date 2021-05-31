@@ -1,4 +1,4 @@
-@import '~@angular/material/theming';
+@use '~@angular/material' as mat;
 @import "~src/styles/base/variables";
 @import "~src/styles/base/mixins";
 
@@ -10,29 +10,29 @@
 
 	a {
 		transition: all $bookish-guacamole-transition-default ease-out;
-		color: mat-color($foreground, text);
+		color: mat.get-color-from-palette($foreground, text);
 
 		&:hover {
-			color: mat-color($foreground, text);
+			color: mat.get-color-from-palette($foreground, text);
 		}
 
 		&.text-link {
 			@include hover-and-active() {
-				color: mat-color($accent);
+				color: mat.get-color-from-palette($accent);
 			}
 		}
 	}
 
 	.text-color-accent {
-		color: mat-color($accent);
+		color: mat.get-color-from-palette($accent);
 	}
 
 	.text-color-secondary {
-		color: mat-color($foreground, secondary-text);
+		color: mat.get-color-from-palette($foreground, secondary-text);
 	}
 
 	.text-color-warn {
-		color: mat-color($warn);
+		color: mat.get-color-from-palette($warn);
 	}
 
 	// darker version of the dialog backdrop

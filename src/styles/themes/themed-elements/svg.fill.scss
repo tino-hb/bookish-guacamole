@@ -2,7 +2,7 @@
 // theming for svg elements  //
 // by setting fill attribute //
 // ------------------------- //
-@import '~@angular/material/theming';
+@use '~@angular/material' as mat;
 @import "~src/styles/base/variables";
 
 @mixin bookish-guacamole-svg-fill-theme($theme) {
@@ -10,11 +10,11 @@
 	$accent: map-get($theme, accent);
 	$background: map-get($theme, background);
 	$foreground: map-get($theme, foreground);
-	$svg-fill-default: mat-color($foreground, text);
-	$svg-fill-primary: mat-color($primary);
-	$svg-fill-accent: mat-color($accent);
-	$svg-fill-contrast: mat-color($primary, default-contrast);
-	$svg-fill-card: mat-color($background, card);
+	$svg-fill-default: mat.get-color-from-palette($foreground, text);
+	$svg-fill-primary: mat.get-color-from-palette($primary);
+	$svg-fill-accent: mat.get-color-from-palette($accent);
+	$svg-fill-contrast: mat.get-color-from-palette($primary, default-contrast);
+	$svg-fill-card: mat.get-color-from-palette($background, card);
 	$svg-fill-divider: map-get($foreground, divider);
 
 	.svg-fill {

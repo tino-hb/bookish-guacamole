@@ -2,24 +2,24 @@
 // theming for bookish-guacamole ghost list item    //
 // check component for documentation //
 // --------------------------------- //
+@use '~@angular/material' as mat;
 @import "~src/styles/base/variables";
-@import '~@angular/material/theming';
 
 @mixin bookish-guacamole-ghost-list-item-theme($theme) {
 	$foreground: map-get($theme, foreground);
 	$background: map-get($theme, background);
-	$ghost-list-color-card: mat-color($background, card);
-	$ghost-list-color-devider: map-get($foreground, divider);
+	$ghost-list-color-card: mat.get-color-from-palette($background, card);
+	$ghost-list-color-divider: map-get($foreground, divider);
 
 	.ghost-list-item {
 		background-color: $ghost-list-color-card;
 
 		&__icon {
-			color: $ghost-list-color-devider;
+			color: $ghost-list-color-divider;
 		}
 
 		&__title {
-			background-color: $ghost-list-color-devider;
+			background-color: $ghost-list-color-divider;
 		}
 	}
 }

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core'
 import { CommonModule } from '@angular/common'
-import { HIGHLIGHT_OPTIONS, HighlightModule } from 'ngx-highlightjs'
+import { HighlightModule } from 'ngx-highlightjs'
 import { ClipboardModule } from '@angular/cdk/clipboard'
 import { MatButtonModule } from '@angular/material/button'
 import { MatExpansionModule } from '@angular/material/expansion'
@@ -18,6 +18,8 @@ import { CodeSnippetComponent } from './components/code-snippet'
     CommonModule,
     HighlightModule,
     ClipboardModule,
+
+    // shared angular material resources
     MatButtonModule,
     MatExpansionModule,
     MatIconModule,
@@ -26,15 +28,14 @@ import { CodeSnippetComponent } from './components/code-snippet'
 
   exports: [
     CodeSnippetComponent,
+
+    // shared angular material resources
+    MatButtonModule,
+    MatExpansionModule,
+    MatIconModule,
+    MatTooltipModule,
   ],
 
-  providers: [
-    {
-      provide: HIGHLIGHT_OPTIONS,
-      useValue: {
-        fullLibraryLoader: () => import('highlight.js'),
-      },
-    },
-  ],
+  providers: [],
 })
 export class CodeModule { }

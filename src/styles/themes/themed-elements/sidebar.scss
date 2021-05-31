@@ -1,5 +1,5 @@
+@use '~@angular/material' as mat;
 @import "~src/styles/base/variables";
-@import '~@angular/material/theming';
 
 @mixin bookish-guacamole-sidebar-theme($theme) {
 	$primary: map-get($theme, primary);
@@ -11,7 +11,7 @@
 		height: 100%;
 
 		.sidebar {
-			background-color: mat-color($primary);
+			background-color: mat.get-color-from-palette($primary);
 			padding-bottom: $bookish-guacamole-sidebar-toggle-size;
 			border-bottom-right-radius: 2%;
 			border-right-width: 0;
@@ -65,7 +65,7 @@
 				font-family: $bookish-guacamole-font-family-outstanding;
 				position: relative;
 				color: $bookish-guacamole-color-white;
-				background-color: mat-color($primary);
+				background-color: mat.get-color-from-palette($primary);
 				width: $bookish-guacamole-sidebar-width-default;
 				overflow: hidden;
 
@@ -85,7 +85,7 @@
 					transition: all $bookish-guacamole-sidebar-animation-duration ease-out;
 					padding: 0 $bookish-guacamole-spacing-s;
 					margin-left: 3px;
-					background-color: mat-color($primary);
+					background-color: mat.get-color-from-palette($primary);
 
 					.mat-list-icon {
 						transition: all $bookish-guacamole-sidebar-animation-duration ease-out;
@@ -123,7 +123,7 @@
 					background-color: map-get($primary, darker);
 
 					&:before {
-						border-color: mat-color($accent);
+						border-color: mat.get-color-from-palette($accent);
 					}
 
 					.mat-list-item-content {

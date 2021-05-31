@@ -2,8 +2,8 @@
 // theming for bookish-guacamole mikado element     //
 // check component for documentation //
 // --------------------------------- //
+@use '~@angular/material' as mat;
 @import "~src/styles/base/variables";
-@import '~@angular/material/theming';
 
 $mikado-width: $bookish-guacamole-mikado-size-default;
 $mikado-height: $bookish-guacamole-mikado-size-default;
@@ -19,9 +19,9 @@ $mikado-transition-default: $bookish-guacamole-transition-default;
 	$primary: map-get($theme, primary);
 	$accent: map-get($theme, accent);
 	$foreground: map-get($theme, foreground);
-	$mikado-color-default: mat-color($foreground, text);
-	$mikado-color-primary: mat-color($primary);
-	$mikado-color-accent: mat-color($accent);
+	$mikado-color-default: mat.get-color-from-palette($foreground, text);
+	$mikado-color-primary: mat.get-color-from-palette($primary);
+	$mikado-color-accent: mat.get-color-from-palette($accent);
 
 	.mikado {
 		display: inline-block;
@@ -125,7 +125,7 @@ $mikado-transition-default: $bookish-guacamole-transition-default;
 		// --------
 		&--color-contrast {
 			span {
-				background: mat-color($primary, default-contrast);
+				background: mat.get-color-from-palette($primary, default-contrast);
 			}
 		}
 

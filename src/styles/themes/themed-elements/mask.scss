@@ -2,19 +2,19 @@
 // theming for bookish-guacamole mask elements      //
 // check component for documentation //
 // --------------------------------- //
+@use '~@angular/material' as mat;
 @import "~src/styles/base/variables";
 @import "~src/styles/base/mixins";
-@import '~@angular/material/theming';
 
 @mixin bookish-guacamole-mask-theme($theme) {
 	$primary: map-get($theme, primary);
 	$accent: map-get($theme, accent);
 	$background: map-get($theme, background);
-	$mask-color-default: mat-color($background, background);
-	$mask-color-primary: mat-color($primary);
-	$mask-color-card: mat-color($background, card);
-	$mask-color-accent: mat-color($accent);
-	$mask-color-contrast: mat-color($primary, default-contrast);
+	$mask-color-default: mat.get-color-from-palette($background, background);
+	$mask-color-primary: mat.get-color-from-palette($primary);
+	$mask-color-card: mat.get-color-from-palette($background, card);
+	$mask-color-accent: mat.get-color-from-palette($accent);
+	$mask-color-contrast: mat.get-color-from-palette($primary, default-contrast);
 
 	.mask {
 		.mask {
