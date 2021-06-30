@@ -19,6 +19,7 @@
       box-shadow: 0 16px 38px -12px rgb(0 0 0 / 56%), 0 4px 25px 0 rgb(0 0 0 / 12%), 0 8px 10px -5px rgb(0 0 0 / 20%);
       display: flex;
       flex-direction: column;
+      transition: width $bookish-guacamole-sidebar-animation-duration ease-out;
 
       &:before {
         content: "";
@@ -43,20 +44,21 @@
       }
 
       &__logo {
-        padding: 16px;
+        padding: map-get($bookish-guacamole-spacers, 3);
         text-align: center;
         text-transform: uppercase;
         font-size: 16px;
         display: flex;
         align-items: center;
         background: mat.get-color-from-palette($background, background);
+        overflow: hidden;
 
         &__image {
-          height: 40px;
+          width: $bookish-guacamole-sidebar-width-collapsed;
         }
 
         &__title {
-          padding-left: 12px;
+          padding-left: map-get($bookish-guacamole-spacers, 3);
         }
       }
 
@@ -64,32 +66,35 @@
         flex-grow: 1;
 
         overflow: auto;
+        display: flex;
+        flex-direction: column;
+        padding: map-get($bookish-guacamole-spacers, 3);
 
         /* for Firefox */
         min-height: 0;
+        scrollbar-width: none;
 
-        display: flex;
-        flex-direction: column;
-        padding: 16px;
+        /* for webkit browsers */
+        &::-webkit-scrollbar {
+          display: none;
+        }
 
         &__item {
-          height: 50px;
-          padding: 0 12px;
-          margin-bottom: 12px;
-          transition: all $bookish-guacamole-transition-default ease-in-out;
+          height: $bookish-guacamole-sidebar-width-collapsed;
+          margin-bottom: map-get($bookish-guacamole-spacers, 3);
+          transition: all $bookish-guacamole-transition-fast ease-in-out;
           display: flex;
           flex-shrink: 0;
           align-items: center;
           text-decoration: none;
           background: transparent;
           border-radius: $bookish-guacamole-border-radius-default;
+          overflow: hidden;
+          transform: translate3d(0, 0, 0);
 
-          &:hover {
-            background-color: rgba(mat.get-color-from-palette($foreground, text), 0.1);
-          }
-
-          &__icon {
-            margin-right: 12px;
+          mat-icon {
+            transition: all $bookish-guacamole-transition-fast ease-out;
+            margin: map-get($bookish-guacamole-spacers, 3);
             color: mat.get-color-from-palette($foreground, icon);
           }
 
@@ -99,10 +104,37 @@
             box-shadow: 0 4px 20px 0 rgb(0 0 0 / 14%), 0 7px 10px -5px rgba(mat.get-color-from-palette($accent), 0.6);
 
             * {
-              color: $bookish-guacamole-color-white;
+              color: $bookish-guacamole-color-white!important;
+            }
+          }
+
+          &--collapsed {
+            width: $bookish-guacamole-sidebar-width-collapsed;
+          }
+
+          &:not([class*="--active"]) {
+            &:hover {
+              background-color: rgba(mat.get-color-from-palette($foreground, text), 0.1);
+
+              mat-icon {
+                transform: scale(1.1);
+              }
             }
           }
         }
+      }
+
+      &--collapsed {
+        width: $bookish-guacamole-sidebar-width-collapsed + (2 * map-get($bookish-guacamole-spacers, 3));
+      }
+    }
+
+    .sidenav-content {
+      transition: all $bookish-guacamole-sidebar-animation-duration ease-out;
+      margin-left: $bookish-guacamole-sidebar-width-default !important;
+
+      &--collapsed {
+        margin-left: $bookish-guacamole-sidebar-width-collapsed + (2 * map-get($bookish-guacamole-spacers, 3)) !important;
       }
     }
   }

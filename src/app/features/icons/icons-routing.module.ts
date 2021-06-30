@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core'
 import { RouterModule, Routes } from '@angular/router'
-import { IconsComponent } from './icons.component'
+import { IconsPageComponent } from './pages/icons-page.component'
 
 const routes: Routes = [
-  { path: '', component: IconsComponent },
+  { path: '', component: IconsPageComponent },
 ]
 
 @NgModule({

@@ -1,16 +1,18 @@
 import { Action, createReducer, on } from '@ngrx/store'
 
 import { SettingsState } from '../types/setting'
-import { actionSettingsChangeTheme } from '../actions/settings.actions'
+import { actionSettingsChangeTheme, actionSettingsToggleNavigationCollapse } from '../actions/settings.actions'
 
 export const initialState: SettingsState = {
   theme: 'default',
+  navigationCollapsed: false,
 }
 
 const reducer = createReducer(
   initialState,
   on(
     actionSettingsChangeTheme,
+    actionSettingsToggleNavigationCollapse,
     (state, action) => ({ ...state, ...action }),
   ),
 )

@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common'
 import { MatCardModule } from "@angular/material/card"
 import { MatListModule } from "@angular/material/list"
 import { MatSlideToggleModule } from '@angular/material/slide-toggle'
-import { MatTabsModule } from '@angular/material/tabs'
 import { MatGridListModule } from '@angular/material/grid-list'
 import { MatMenuModule } from '@angular/material/menu'
 import { MatTableModule } from '@angular/material/table'
@@ -11,12 +10,14 @@ import { MatPaginatorModule } from '@angular/material/paginator'
 import { MatChipsModule } from '@angular/material/chips'
 
 import { CardComponent } from './components/card/card.component'
+import { ComingSoonComponent } from './components/coming-soon/coming-soon.component'
 import { CodeModule } from './code/code.module'
 
 @NgModule({
   declarations: [
     // custom ui elements
     CardComponent,
+    ComingSoonComponent,
   ],
   imports: [
     CommonModule,
@@ -33,7 +34,6 @@ import { CodeModule } from './code/code.module'
     MatPaginatorModule,
     MatSlideToggleModule,
     MatTableModule,
-    MatTabsModule,
   ],
 
   exports: [
@@ -49,10 +49,10 @@ import { CodeModule } from './code/code.module'
     MatPaginatorModule,
     MatSlideToggleModule,
     MatTableModule,
-    MatTabsModule,
 
     // custom ui elements
     CardComponent,
+    ComingSoonComponent,
   ],
 })
 export class SharedModule { }

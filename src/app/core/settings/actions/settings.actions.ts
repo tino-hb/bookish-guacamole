@@ -6,3 +6,8 @@ export const actionSettingsChangeTheme = createAction(
   '[Settings] Change Theme',
   props<{ theme: Theme }>(),
 )
+
+export const actionSettingsToggleNavigationCollapse = createAction(
+  '[Settings] Toggle Navigation Collapse',
+  props<{ navigationCollapsed: boolean }>(),
+)

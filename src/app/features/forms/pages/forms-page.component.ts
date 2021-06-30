@@ -2,12 +2,12 @@ import { Component } from '@angular/core'
 
 @Component({
   selector: 'app-forms',
-  templateUrl: './forms.component.html',
+  templateUrl: './forms-page.component.html',
   styleUrls: [
-    './forms.component.scss',
+    './forms-page.component.scss',
   ],
 })
-export class FormsComponent {
+export class FormsPageComponent {
 
   constructor() {}
 }

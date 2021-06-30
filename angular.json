@@ -35,6 +35,9 @@
             ],
             "scripts": [
               "node_modules/marked/lib/marked.js"
+            ],
+            "allowedCommonJsDependencies": [
+              "highlight.js"
             ]
           },
           "configurations": {

@@ -11,8 +11,6 @@ import { UiFacadeService } from './services/ui.facade.service'
     MatSnackBarModule,
   ],
   declarations: [],
-  // dynamically loaded components have to be registered here
-  entryComponents: [],
   providers: [
     // highlight options token can only be imported in an eager module
     {

@@ -3,7 +3,7 @@ import { MarkdownModule, MarkdownService } from 'ngx-markdown'
 
 import { AboutComponent } from './about.component'
 
-describe('AboutComponent', () => {
+describe('ChartsComponent', () => {
   let component: AboutComponent
   let fixture: ComponentFixture<AboutComponent>
   let markdownService: MarkdownService

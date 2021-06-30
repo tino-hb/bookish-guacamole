@@ -3,12 +3,13 @@ import { CommonModule } from '@angular/common'
 
 import { SharedModule } from '@shared/shared.module'
 import { IconsRoutingModule } from './icons-routing.module'
-import { IconsComponent } from './icons.component'
+import { IconsPageComponent } from './pages/icons-page.component'
 
 
 @NgModule({
   declarations: [
-    IconsComponent,
+    // pages
+    IconsPageComponent,
   ],
   imports: [
     CommonModule,

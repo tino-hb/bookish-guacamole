@@ -3,9 +3,7 @@ import { provideMockStore } from '@ngrx/store/testing'
 import { NoopAnimationsModule } from '@angular/platform-browser/animations'
 import { RouterTestingModule } from '@angular/router/testing'
 
-// @ts-ignore
-import { CoreModule } from '@core/core.module'
-import { SharedModule } from '@shared/shared.module'
+import { AppModule } from '../app.module'
 import { AppComponent } from './app.component'
 import { testAppState } from '../core/core.state'
 
@@ -13,8 +11,7 @@ describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
-        CoreModule,
-        SharedModule,
+        AppModule,
         RouterTestingModule,
         NoopAnimationsModule,
       ],

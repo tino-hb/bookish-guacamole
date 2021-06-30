@@ -56,6 +56,7 @@ describe('Settings Effects', () => {
 
       const settings: SettingsState = {
         theme: 'default',
+        navigationCollapsed: false,
       }
       store.pipe.and.returnValue(of(settings))
       const persistAction = actionSettingsChangeTheme({ theme: 'default' })

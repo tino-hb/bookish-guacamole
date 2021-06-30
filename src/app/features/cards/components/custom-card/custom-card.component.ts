@@ -1,8 +1,10 @@
 import { Component } from '@angular/core'
 
 import { NotificationService } from '@ui/services/notification.service'
-import { ComponentTemplate } from '@shared/code/template'
+import { ComponentExample } from '@shared/code'
 import htm from '!!raw-loader!./custom-card.component.html'
+import js from '!!raw-loader!./custom-card.component.example.js'
+import scss from '!!raw-loader!./custom-card.component.scss'
 
 @Component({
   selector: 'app-custom-card',
@@ -12,11 +14,13 @@ import htm from '!!raw-loader!./custom-card.component.html'
   ],
 
   providers: [
-    { provide: ComponentTemplate, useExisting: CustomCardComponent },
+    { provide: ComponentExample, useExisting: CustomCardComponent },
   ],
 })
-export class CustomCardComponent implements ComponentTemplate {
+export class CustomCardComponent implements ComponentExample {
   templateText = htm
+  controllerText = js
+  styleText = scss
 
   constructor(
     private notificationService: NotificationService,
@@ -24,6 +28,6 @@ export class CustomCardComponent implements ComponentTemplate {
   }
 
   onLikeButtonClick (): void {
-    this.notificationService.default('Cuddle me', 3500)
+    this.notificationService.default('Cuddle me', 350000)
   }
 }

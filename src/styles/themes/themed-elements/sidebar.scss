@@ -19,7 +19,7 @@
 			.sidebar-brand {
 				font-family: $bookish-guacamole-font-family-outstanding;
 				transition: all $bookish-guacamole-sidebar-animation-duration ease-out;
-				padding: $bookish-guacamole-spacing-base $bookish-guacamole-toolbar-horizontal-spacing-default;
+				padding: $bookish-guacamole-spacer $bookish-guacamole-toolbar-horizontal-spacing-default;
 				border-bottom: 1px solid $divider;
 				display: flex;
 				align-items: center;
@@ -39,7 +39,7 @@
 				}
 
 				&__beta {
-					margin-left: $bookish-guacamole-spacing-xs;
+					margin-left: map-get($bookish-guacamole-spacers, 1);
 					color: $bookish-guacamole-color-brand-beta;
 					overflow: hidden;
 				}
@@ -48,7 +48,7 @@
 					width: $bookish-guacamole-sidebar-width-collapsed;
 					font-size: 0;
 					justify-content: center;
-					padding: $bookish-guacamole-spacing-base 0;
+					padding: $bookish-guacamole-spacer 0;
 
 					.sidebar-brand__title {
 						display: none;
@@ -77,13 +77,13 @@
 					top: -2px;
 					left: 0;
 					width: 48px;
-					border: $bookish-guacamole-spacing-xs solid transparent;
+					border: map-get($bookish-guacamole-spacers, 2) solid transparent;
 					border-radius: $bookish-guacamole-border-radius-outstanding;
 				}
 
 				.mat-list-item-content {
 					transition: all $bookish-guacamole-sidebar-animation-duration ease-out;
-					padding: 0 $bookish-guacamole-spacing-s;
+					padding: 0 map-get($bookish-guacamole-spacers, 3);
 					margin-left: 3px;
 					background-color: mat.get-color-from-palette($primary);
 
@@ -95,7 +95,7 @@
 
 					.mat-list-text {
 						transition: all $bookish-guacamole-sidebar-animation-duration ease-out;
-						padding-left: $bookish-guacamole-spacing-s;
+						padding-left: map-get($bookish-guacamole-spacers, 3);
 					}
 				}
 
@@ -114,7 +114,7 @@
 						}
 
 						.mat-list-text {
-							padding-left: $bookish-guacamole-spacing-s + $bookish-guacamole-icon-spacing-default;
+							padding-left: map-get($bookish-guacamole-spacers, 3) + $bookish-guacamole-icon-spacing-default;
 						}
 					}
 				}
@@ -134,7 +134,7 @@
 						}
 
 						.mat-list-text {
-							padding-left: $bookish-guacamole-spacing-s + $bookish-guacamole-icon-spacing-default;
+							padding-left: map-get($bookish-guacamole-spacers, 3) + $bookish-guacamole-icon-spacing-default;
 						}
 					}
 

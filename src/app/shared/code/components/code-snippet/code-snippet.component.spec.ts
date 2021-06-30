@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing'
+import { NoopAnimationsModule } from '@angular/platform-browser/animations'
 
 import { CodeSnippetComponent } from './code-snippet.component'
 
@@ -8,6 +9,9 @@ describe('CodeSnippetComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
+      imports: [
+        NoopAnimationsModule,
+      ],
       declarations: [
         CodeSnippetComponent,
       ],

@@ -8,6 +8,7 @@ const routes: Routes = [
   { path: 'forms', loadChildren: () => import('./features/forms/forms.module').then(m => m.FormsModule) },
   { path: 'icons', loadChildren: () => import('./features/icons/icons.module').then(m => m.IconsModule) },
   { path: 'cards', loadChildren: () => import('./features/cards/cards.module').then(m => m.CardsModule) },
+  { path: 'charts', loadChildren: () => import('./features/charts/charts.module').then(m => m.ChartsModule) },
 ]
 
 @NgModule({

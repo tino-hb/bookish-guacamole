@@ -22,7 +22,6 @@ describe('Notifications Service', () => {
         initialState: testUiState,
       }),
     ],
-    entryComponents: [],
     mocks: [
       MatSnackBar,
     ],

@@ -11,6 +11,7 @@ import { CoreModule } from './core/core.module'
 import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app/app.component'
 import { MatDividerModule } from '@angular/material/divider'
+import { MatTooltipModule } from '@angular/material/tooltip'
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { MatDividerModule } from '@angular/material/divider'
     MatSidenavModule,
     MatSlideToggleModule,
     MatToolbarModule,
+    MatTooltipModule,
   ],
   providers: [],
   bootstrap: [

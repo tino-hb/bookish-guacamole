@@ -11,9 +11,12 @@ $label-margin-bottom: 0;
 // --------------------------------------------------------------
 $bookish-guacamole-font-family-base: 'Lato';
 $bookish-guacamole-font-family-outstanding: 'Lato';
+
 $bookish-guacamole-font-size-base: 16px;
+
 $bookish-guacamole-font-size-large: 18px;
 $bookish-guacamole-line-height-base: 1.5;
+
 $bookish-guacamole-font-size-headline: 24px;
 $bookish-guacamole-line-height-headline: 36px;
 $bookish-guacamole-font-size-title: 20px;
@@ -22,44 +25,49 @@ $bookish-guacamole-font-size-subheading-2: 16px;
 $bookish-guacamole-line-height-subheading-2: 28px;
 $bookish-guacamole-font-size-subheading-1: 15px;
 $bookish-guacamole-line-height-subheading-1: 24px;
+
 $bookish-guacamole-font-size-caption: 14px;
 $bookish-guacamole-line-height-caption: 20px;
 $bookish-guacamole-font-size-button: 16px;
 
 
 // sizes & spacings
-// ----------------
+// configure spacers to do 4px steps for easily rememberable class names (e.g. class `mb-2` for 8px bottom margin)
+// also used as bootsrap variables overrides
+// all spacing related bootstrap utility classes are built on this
+// -----------------------------------------
 
-// base size
-$bookish-guacamole-size-default: 36px;
+$bookish-guacamole-spacer: 16px;
+$spacer: $bookish-guacamole-spacer;
 
-$bookish-guacamole-spacing-xxxxxxxl: $bookish-guacamole-size-default * 2; 					// 72px
-$bookish-guacamole-spacing-xxxxxxl: round($bookish-guacamole-size-default * 1.8333333333);	// 66px
-$bookish-guacamole-spacing-xxxxxl: round($bookish-guacamole-size-default * 1.6666666666); 	// 60px
-$bookish-guacamole-spacing-xxxxl: round($bookish-guacamole-size-default * 1.5); 				// 54px
-$bookish-guacamole-spacing-xxxl: round($bookish-guacamole-size-default * 1.3333333333); 		// 48px
-$bookish-guacamole-spacing-xxl: round($bookish-guacamole-size-default * 1.1666666666); 		// 42px
-$bookish-guacamole-spacing-xl: $bookish-guacamole-size-default * 1; 							// 36px
-$bookish-guacamole-spacing-l: round($bookish-guacamole-size-default * .8333333333); 			// 30px
-$bookish-guacamole-spacing-base: round($bookish-guacamole-size-default * .6666666666); 		// 24px
-$bookish-guacamole-spacing-m: round($bookish-guacamole-size-default * .5); 					// 18px
-$bookish-guacamole-spacing-s: round($bookish-guacamole-size-default * .3333333333); 			// 12px
-$bookish-guacamole-spacing-xs: round($bookish-guacamole-size-default * .1666666666); 			// 6px
-$bookish-guacamole-spacing-micro: round($bookish-guacamole-size-default * .0833333333); 		// 3px
-$bookish-guacamole-spacing-nano: round($bookish-guacamole-size-default * .0555555555); 		// 2px
+$bookish-guacamole-spacers: (
+  0:  0,
+  1:  $bookish-guacamole-spacer * .25,    // 4px
+  2:  $bookish-guacamole-spacer * .5,     // 8px
+  3:  $bookish-guacamole-spacer * .75,    // 12px
+  4:  $bookish-guacamole-spacer,          // 16px
+  5:  $bookish-guacamole-spacer * 1.25,   // 20px
+  6:  $bookish-guacamole-spacer * 1.5,    // 24px
+  7:  $bookish-guacamole-spacer * 1.75,   // 28px
+  8:  $bookish-guacamole-spacer * 2,      // 32px
+  9:  $bookish-guacamole-spacer * 2.25,   // 36px
+  10: $bookish-guacamole-spacer * 2.5,    // 40px
+  11: $bookish-guacamole-spacer * 2.75,   // 44px
+  12: $bookish-guacamole-spacer * 3,      // 48px
+);
 
+$spacers: $bookish-guacamole-spacers;
 
-// breakpoints for bootstrap grid
-// ------------------------------
-$spacer: $bookish-guacamole-size-default;
-$grid-gutter-width: $spacer;
+// bootstrap grid
+// --------------
 
 $grid-breakpoints: (
-	xs: 0,
-	sm: 576px,
-	md: 768px,
-	lg: 992px,
-	xl: 1200px
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
 );
 
 
@@ -167,11 +175,11 @@ $bookish-guacamole-toolbar-height-default: 60px;
 $bookish-guacamole-toolbar-height-mobile: $bookish-guacamole-icon-space-default;
 $bookish-guacamole-toolbar-font-size-default: $bookish-guacamole-font-size-large;
 $bookish-guacamole-toolbar-font-size-mobile: $bookish-guacamole-font-size-base;
-$bookish-guacamole-toolbar-horizontal-spacing-default: round($grid-gutter-width / 3);
+$bookish-guacamole-toolbar-horizontal-spacing-default: round($bookish-guacamole-spacer / 3);
 
 // navigation sidebar
 $bookish-guacamole-sidebar-width-default: 260px;
-$bookish-guacamole-sidebar-width-collapsed: $bookish-guacamole-icon-space-default;
+$bookish-guacamole-sidebar-width-collapsed: map-get($bookish-guacamole-spacers, 12);
 $bookish-guacamole-sidebar-animation-duration: 225ms;
 $bookish-guacamole-sidebar-toggle-size: $bookish-guacamole-icon-space-default;
 
@@ -179,6 +187,8 @@ $bookish-guacamole-sidebar-toggle-size: $bookish-guacamole-icon-space-default;
 // transition
 // ----------
 $bookish-guacamole-transition-default: 250ms;
+$bookish-guacamole-transition-fast: 200ms;
+$bookish-guacamole-transition-slow: 300ms;
 
 
 // border radius

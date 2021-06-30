@@ -2,6 +2,7 @@ import { AppState } from '../../core.state'
 
 export interface SettingsState {
 	theme: Theme,
+  navigationCollapsed: boolean,
 }
 
 export interface State extends AppState {

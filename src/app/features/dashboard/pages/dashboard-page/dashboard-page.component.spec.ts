@@ -1,22 +1,22 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing'
 
-import { TypographyComponent } from './typography.component'
+import { DashboardPageComponent } from './dashboard-page.component'
 
-describe('TypographyComponent', () => {
-  let component: TypographyComponent
-  let fixture: ComponentFixture<TypographyComponent>
+describe('DashboardPageComponent', () => {
+  let component: DashboardPageComponent
+  let fixture: ComponentFixture<DashboardPageComponent>
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [
-        TypographyComponent, 
+        DashboardPageComponent,
       ],
     })
       .compileComponents()
   })
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TypographyComponent)
+    fixture = TestBed.createComponent(DashboardPageComponent)
     component = fixture.componentInstance
     fixture.detectChanges()
   })

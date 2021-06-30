@@ -18,3 +18,8 @@ export const selectSettingsTheme = createSelector(
   selectSettingsState,
   settings => settings.theme,
 )
+
+export const selectSettingsNavigationCollapse = createSelector(
+  selectSettingsState,
+  settings => settings.navigationCollapsed,
+)

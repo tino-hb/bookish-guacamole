@@ -8,7 +8,7 @@ import { tap, withLatestFrom } from 'rxjs/operators'
 import { LocalStorageService } from '../../storage'
 import { State } from '../types/setting'
 import { selectSettingsFeature } from '../selectors/settings.selectors'
-import { actionSettingsChangeTheme } from '../actions/settings.actions'
+import { actionSettingsChangeTheme, actionSettingsToggleNavigationCollapse } from '../actions/settings.actions'
 import { selectSettingsTheme } from '../selectors/settings.selectors'
 
 export const SETTINGS_KEY = 'SETTINGS'
@@ -28,6 +28,7 @@ export class SettingsEffects {
 	  this.actions$.pipe(
 	    ofType(
 	      actionSettingsChangeTheme,
+	      actionSettingsToggleNavigationCollapse,
 	    ),
 	    withLatestFrom(
 	      this.store.pipe(select(selectSettingsFeature)),

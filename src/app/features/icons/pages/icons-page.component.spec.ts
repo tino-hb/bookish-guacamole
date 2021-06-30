@@ -5,11 +5,11 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations'
 // @ts-ignore
 import { CoreModule } from '@core/core.module'
 import { SharedModule } from '@shared/shared.module'
-import { IconsComponent } from './icons.component'
+import { IconsPageComponent } from './icons-page.component'
 
-describe('IconsComponent', () => {
-  let component: IconsComponent
-  let fixture: ComponentFixture<IconsComponent>
+describe('IconsPageComponent', () => {
+  let component: IconsPageComponent
+  let fixture: ComponentFixture<IconsPageComponent>
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -20,14 +20,14 @@ describe('IconsComponent', () => {
         NoopAnimationsModule,
       ],
       declarations: [
-        IconsComponent,
+        IconsPageComponent,
       ],
     })
       .compileComponents()
   })
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(IconsComponent)
+    fixture = TestBed.createComponent(IconsPageComponent)
     component = fixture.componentInstance
     fixture.detectChanges()
   })

@@ -1,11 +1,11 @@
 <div class="bookish-guacamole-theme-wrapper {{ theme$ | async }}-theme">
   <mat-sidenav-container
-    autosize
     class="sidenav-container"
   >
     <mat-sidenav
       #drawer
       class="sidenav"
+      [ngClass]="{'sidenav--collapsed': sideNavCollapsed}"
       style="background-image: url('assets/sidebar_bg.jpg');"
       fixedInViewport
       [attr.role]="(isMobile$ | async) ? 'dialog' : 'navigation'"
@@ -18,7 +18,7 @@
           alt="Logo"
           src="assets/logo_small.jpg"
         />
-        <span class="sidenav__logo__title">{{ title }}</span>
+        <span class="sidenav__logo__title text-truncate">{{ title }}</span>
       </div>
       <mat-divider></mat-divider>
       <div class="sidenav__list">
@@ -27,13 +27,17 @@
           routerLink="{{ item.path }}"
           [routerLinkActive]="'sidenav__list__item--active'"
           class="sidenav__list__item"
+          [ngClass]="{'sidenav__list__item--collapsed': sideNavCollapsed}"
+          [matTooltip]="item.label"
+          matTooltipPosition="after"
+          [matTooltipDisabled]="!sideNavCollapsed"
         >
-          <mat-icon class="sidenav__list__item__icon">{{ item.icon }}</mat-icon>
+          <mat-icon>{{ item.icon }}</mat-icon>
           {{ item.label }}
         </a>
       </div>
     </mat-sidenav>
-    <mat-sidenav-content>
+    <mat-sidenav-content [ngClass]="{'sidenav-content': (isMobile$ | async) === false, 'sidenav-content--collapsed': sideNavCollapsed}">
       <mat-toolbar class="flex-column align-items-end justify-content-center">
         <button
           type="button"
@@ -54,6 +58,18 @@
             inline
           >
             nightlight_round
+          </mat-icon>
+        </mat-slide-toggle>
+        <mat-slide-toggle
+          color="accent"
+          [checked]="sideNavCollapsed"
+          (change)="onNavigationCollapseToggle()"
+        >
+          <mat-icon
+            [color]="sideNavCollapsed ? 'accent' : undefined"
+            inline
+          >
+            menu_open
           </mat-icon>
         </mat-slide-toggle>
       </mat-toolbar>

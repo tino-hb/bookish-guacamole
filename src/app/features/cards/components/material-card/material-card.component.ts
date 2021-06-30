@@ -1,7 +1,7 @@
 import { Component } from '@angular/core'
 
 import { NotificationService } from '@ui/services/notification.service'
-import { ComponentTemplate } from '@shared/code/template'
+import { ComponentExample } from '@shared/code'
 import htm from '!!raw-loader!./material-card.component.html'
 
 @Component({
@@ -12,10 +12,10 @@ import htm from '!!raw-loader!./material-card.component.html'
   ],
 
   providers: [
-    { provide: ComponentTemplate, useExisting: MaterialCardComponent },
+    { provide: ComponentExample, useExisting: MaterialCardComponent },
   ],
 })
-export class MaterialCardComponent implements ComponentTemplate {
+export class MaterialCardComponent implements ComponentExample {
   templateText = htm
 
   constructor(

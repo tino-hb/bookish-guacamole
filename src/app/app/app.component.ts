@@ -1,6 +1,11 @@
 import { Component } from '@angular/core'
 import { NavigationItem } from "./types/navigation"
-import { actionSettingsChangeTheme, SettingsFacadeService, Theme } from '../core/settings'
+import {
+  actionSettingsChangeTheme,
+  actionSettingsToggleNavigationCollapse,
+  SettingsFacadeService,
+  Theme,
+} from '../core/settings'
 import { UiFacadeService } from '../core/ui'
 import { Subscription } from 'rxjs'
 
@@ -20,12 +25,20 @@ export class AppComponent {
   isDarkTheme: boolean = false
   themeSubscription: Subscription
 
+  navigationCollapsed$ = this.settingsFacadeService.navigationCollapsed$
+  sideNavCollapsed: boolean = true
+  navigationCollapseSubscription: Subscription
+
   constructor(
     private settingsFacadeService: SettingsFacadeService,
     private uiFacadeService: UiFacadeService,
   ) {
     this.themeSubscription = this.theme$.subscribe((theme: Theme) => {
       this.isDarkTheme = theme === 'dark'
+    })
+
+    this.navigationCollapseSubscription = this.navigationCollapsed$.subscribe((collapsed: boolean) => {
+      this.sideNavCollapsed = collapsed
     })
   }
 
@@ -60,11 +73,22 @@ export class AppComponent {
       label: 'Cards',
       icon: 'crop_original',
     },
+    {
+      path: '/charts',
+      label: 'Charts',
+      icon: 'bar_chart',
+    },
   ]
 
   onThemeToggle() {
     const theme: Theme = this.isDarkTheme ? 'default' : 'dark'
 
     this.settingsFacadeService.dispatch(actionSettingsChangeTheme({ theme }))
+  }
+
+  onNavigationCollapseToggle() {
+    const navigationCollapsed: boolean = !this.sideNavCollapsed
+
+    this.settingsFacadeService.dispatch(actionSettingsToggleNavigationCollapse({ navigationCollapsed }))
   }
 }

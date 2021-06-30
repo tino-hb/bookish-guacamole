@@ -8,6 +8,9 @@
 	$warn: map-get($theme, warn);
 	$foreground: map-get($theme, foreground);
 
+  color: mat.get-color-from-palette($foreground, text);
+  fill: mat.get-color-from-palette($foreground, text);
+
 	a {
 		transition: all $bookish-guacamole-transition-default ease-out;
 		color: mat.get-color-from-palette($foreground, text);
@@ -88,6 +91,6 @@
 
 	// reduce mobile
 	.mat-tab-label {
-		padding: 0 $bookish-guacamole-spacing-s;
+		padding: 0 map-get($bookish-guacamole-spacers, 3);
 	}
 }

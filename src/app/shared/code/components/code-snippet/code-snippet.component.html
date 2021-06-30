@@ -1,33 +1,20 @@
-<mat-expansion-panel
-  *ngIf="componentTemplate && componentTemplate.templateText"
-  hideToggle
-  class="align-self-stretch mat-elevation-z0 rounded-0 mt-5 mb-3"
->
-  <mat-expansion-panel-header>
-    <mat-panel-title>
-      {{ label }}
-    </mat-panel-title>
-    <mat-icon matTooltip="View code">code</mat-icon>
-  </mat-expansion-panel-header>
-  <pre>
-    <code
-      [highlight]="componentTemplate.templateText"
-      [languages]="['html']"
-    ></code>
-    <button
-      mat-stroked-button
-      color="accent"
-      (click)="onCopyCodeClick()"
-    >
-      <mat-icon
-        *ngIf="copied else notCopied"
-        [@copyIconAnimation]
-      >check_circle_outline</mat-icon>
-      <ng-template #notCopied>
-        <mat-icon [@copyIconAnimation]>content_copy</mat-icon>
-      </ng-template>
-      Copy code
-    </button>
-  </pre>
-</mat-expansion-panel>
-<ng-content></ng-content>
+<pre>
+  <code
+    [highlight]="codeText"
+    [languages]="['html', 'ts', 'scss']"
+  ></code>
+  <button
+    mat-stroked-button
+    color="accent"
+    (click)="onCopyCodeClick()"
+  >
+    <mat-icon
+      *ngIf="copied else notCopied"
+      [@copyIconAnimation]
+    >check_circle_outline</mat-icon>
+    <ng-template #notCopied>
+      <mat-icon [@copyIconAnimation]>content_copy</mat-icon>
+    </ng-template>
+    <span class="ms-1">Copy code</span>
+  </button>
+</pre>

@@ -6,12 +6,20 @@
 	cursor: pointer;
 }
 
+.spacer {
+  flex: 1 1 auto;
+}
+
 .text-bold {
 	font-weight: bolder;
 }
 
 .text-large {
 	font-size: $bookish-guacamole-font-size-large;
+}
+
+.text-title {
+  font-size: $bookish-guacamole-font-size-title;
 }
 
 .text-small {
