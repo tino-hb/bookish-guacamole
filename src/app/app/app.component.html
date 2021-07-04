@@ -38,16 +38,32 @@
       </div>
     </mat-sidenav>
     <mat-sidenav-content [ngClass]="{'sidenav-content': (isMobile$ | async) === false, 'sidenav-content--collapsed': sideNavCollapsed}">
-      <mat-toolbar class="flex-column align-items-end justify-content-center">
+      <mat-toolbar>
         <button
           type="button"
           aria-label="Toggle sidenav"
           mat-icon-button
           (click)="drawer.toggle()"
-          *ngIf="isMobile$ | async"
+          *ngIf="(isMobile$ | async) else navCollapseToggle"
         >
           <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
         </button>
+        <ng-template #navCollapseToggle>
+          <button
+            type="button"
+            aria-label="Toggle sidenav"
+            mat-icon-button
+            class="collapse-toggle"
+            [ngClass]="{'collapse-toggle--collapsed': sideNavCollapsed}"
+            [color]="sideNavCollapsed ? 'accent' : undefined"
+            (click)="onNavigationCollapseToggle()"
+            [matTooltip]="sideNavCollapsed ? 'Expand navigation' : 'Collapse navigation'"
+            matTooltipPosition="after"
+          >
+            <mat-icon aria-label="Side nav toggle icon">menu_open</mat-icon>
+          </button>
+        </ng-template>
+        <span class="spacer"></span>
         <mat-slide-toggle
           color="accent"
           [checked]="isDarkTheme"
@@ -58,18 +74,6 @@
             inline
           >
             nightlight_round
-          </mat-icon>
-        </mat-slide-toggle>
-        <mat-slide-toggle
-          color="accent"
-          [checked]="sideNavCollapsed"
-          (change)="onNavigationCollapseToggle()"
-        >
-          <mat-icon
-            [color]="sideNavCollapsed ? 'accent' : undefined"
-            inline
-          >
-            menu_open
           </mat-icon>
         </mat-slide-toggle>
       </mat-toolbar>
