@@ -4,7 +4,6 @@ import { MatCardModule } from "@angular/material/card"
 import { MatListModule } from "@angular/material/list"
 import { MatSlideToggleModule } from '@angular/material/slide-toggle'
 import { MatGridListModule } from '@angular/material/grid-list'
-import { MatMenuModule } from '@angular/material/menu'
 import { MatTableModule } from '@angular/material/table'
 import { MatPaginatorModule } from '@angular/material/paginator'
 import { MatChipsModule } from '@angular/material/chips'
@@ -30,7 +29,6 @@ import { CodeModule } from './code/code.module'
     MatChipsModule,
     MatGridListModule,
     MatListModule,
-    MatMenuModule,
     MatPaginatorModule,
     MatSlideToggleModule,
     MatTableModule,
@@ -45,7 +43,6 @@ import { CodeModule } from './code/code.module'
     MatChipsModule,
     MatGridListModule,
     MatListModule,
-    MatMenuModule,
     MatPaginatorModule,
     MatSlideToggleModule,
     MatTableModule,

@@ -12,6 +12,7 @@ import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app/app.component'
 import { MatDividerModule } from '@angular/material/divider'
 import { MatTooltipModule } from '@angular/material/tooltip'
+import { MatMenuModule } from '@angular/material/menu'
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { MatTooltipModule } from '@angular/material/tooltip'
     MatButtonModule,
     MatDividerModule,
     MatIconModule,
+    MatMenuModule,
     MatSidenavModule,
     MatSlideToggleModule,
     MatToolbarModule,
